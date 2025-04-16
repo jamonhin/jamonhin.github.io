@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobseeker-LangChain-CrewAI-Agent - James Montoya</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="index.html" class="flex items-center py-4">
+                            <span class="font-semibold text-gray-500 text-lg">James Montoya</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <a href="index.html#about" class="py-4 px-2 text-gray-500 hover:text-blue-500">About</a>
+                    <a href="index.html#skills" class="py-4 px-2 text-gray-500 hover:text-blue-500">Skills</a>
+                    <a href="index.html#mystory" class="py-4 px-2 text-gray-500 hover:text-blue-500">My Story</a>
+                    <a href="index.html#projects" class="py-4 px-2 text-gray-500 hover:text-blue-500">Projects</a>
+                    <a href="index.html#timeline" class="py-4 px-2 text-gray-500 hover:text-blue-500">Journey</a>
+                    <a href="index.html#contact" class="py-4 px-2 text-gray-500 hover:text-blue-500">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <div class="bg-white py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 md:pr-10">
+                    <iframe 
+                        src="https://www.youtube.com/embed/6xFjjsoKWYQ"
+                        title="AI-Powered Job Seeker Helper"
+                        class="w-full h-64 md:h-96 object-cover rounded-xl shadow-lg"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+                <div class="md:w-1/2 mt-8 md:mt-0">
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Jobseeker-Agent-System</h1>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">CrewAI</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">LLM</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Neo4j</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">OpenAI</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">SerperDev</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">React</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Firebase</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">FastAPI</span>
+                    </div>
+                    <p class="text-gray-600 mb-6">An AI-powered job application enhancement system developed in two complementary parts: a multi-agent notebook solution and a full-featured web application.</p>
+                    
+                    <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                        <h3 class="font-bold text-blue-800">Project Implementations</h3>
+                        <ul class="list-disc pl-6 mt-2 text-gray-700">
+                            <li><span class="font-semibold">Web Application:</span> Built with React, LangChain, Firebase, and FastAPI, offering an interactive user interface</li>
+                            <li><span class="font-semibold">CrewAI Notebook:</span> A multi-agent system using CrewAI for processing job postings and generating application materials</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4 mb-4">
+
+                        <a href="https://www.youtube.com/watch?v=6xFjjsoKWYQ" class="bg-white hover:bg-gray-100 text-blue-600 font-medium py-2 px-6 rounded-full shadow-md transition duration-300 border border-blue-200 flex items-center">
+                            <i class="fab fa-youtube mr-2"></i> Watch Demo
+                        </a>
+
+                        <a href="https://jobseeker2-prod--jobseeker-5d983.asia-east1.hosted.app/" class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-full shadow-md transition duration-300 flex items-center">
+                            <i class="fas fa-play-circle mr-2"></i> Live Web App
+                        </a>
+
+                        <a href="https://github.com/jamonhin/Jobseeker-CrewAI-Agent" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full shadow-md transition duration-300 flex items-center">
+                            <i class="fab fa-github mr-2"></i> CrewAI Repo 
+                        </a>
+            
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Web App Implementation Section -->
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-gray-800 mb-2 text-center">Web Application Implementation</h2>
+            <p class="text-center text-gray-600 mb-8">A full-featured application built with React, Firebase, and FastAPI</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <img src="assets/img/app/JobSeeker-img1.png" alt="JobSeeker Web App" class="w-full rounded-lg shadow-md mb-4">
+                    <p class="text-gray-600 mb-6">The web application provides an intuitive interface where users can create their resume, paste job descriptions, and generate optimized application materials with a single click. Built with modern web technologies, it makes the power of AI job optimization accessible to everyone.</p>
+                    
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Key Features</h3>
+                    <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-600">
+                        <li>User-friendly interface with step-by-step guidance</li>
+                        <li>Resume ingest functionality</li>
+                        <li>Job description analysis in real-time</li>
+                        <li>Job matcher analysis that provides feedback to users for their applications</li>
+                        <li>Job Interview preparation based on the user's resume and the job description</li>
+                        <li>Tailored Cover letter and resume generation with downloadable formats</li>
+                        <li>User accounts to save and manage applications</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Technical Stack</h3>
+                        <p class="text-gray-600 mb-4">The application is built using a modern tech stack:</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 text-blue-800 p-2 rounded-full mr-3">
+                                    <i class="fab fa-react"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-700">React.js Frontend</h4>
+                                    <p class="text-gray-600">Responsive interface with component-based architecture for a seamless user experience</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 text-blue-800 p-2 rounded-full mr-3">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-700">FastAPI Backend</h4>
+                                    <p class="text-gray-600">LangChain Agents that wrapped in a FatsAPI solution to respond to the user needs.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 text-blue-800 p-2 rounded-full mr-3">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-700">Firebase</h4>
+                                    <p class="text-gray-600">Authentication, Data storage, and real-time database functionality</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 text-blue-800 p-2 rounded-full mr-3">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-700">OpenAI Integration</h4>
+                                    <p class="text-gray-600">Leveraging powerful language models for document analysis and generation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-3">
+                        <img src="assets/img/app/JobSeeker-img3.png" alt="JobSeeker App Screenshot" class="w-full h-32 object-cover rounded-lg shadow-md">
+                        <img src="assets/img/app/JobSeeker-img4.png" alt="JobSeeker App Screenshot" class="w-full h-32 object-cover rounded-lg shadow-md">
+                        <img src="assets/img/app/JobSeeker-img6.png" alt="JobSeeker App Screenshot" class="w-full h-32 object-cover rounded-lg shadow-md">
+                        <img src="assets/img/app/JobSeeker-img9.png" alt="JobSeeker App Screenshot" class="w-full h-32 object-cover rounded-lg shadow-md">
+                    </div>
+                    
+                    <div class="mt-6 flex justify-center">
+                        <a href="https://jobseeker2-prod--jobseeker-5d983.asia-east1.hosted.app/" class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-full shadow-md transition duration-300 flex items-center">
+                            <i class="fas fa-play-circle mr-2"></i> Try the Live Application
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- CrewAI Notebook Section -->
+    <div class="bg-white py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-gray-800 mb-2 text-center">CrewAI Notebook Implementation</h2>
+            <p class="text-center text-gray-600 mb-8">The Python-based multi-agent system that powers the AI processing</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <img src="assets/img/crewai/crewai-notebook.png" alt="CrewAI Notebook Implementation" class="w-full rounded-lg shadow-md mb-4">
+                    <p class="text-gray-600 mb-6">This was the first version of the original project. The CrewAI framework enables the creation of a collaborative team of AI agents, each with specialized roles and capabilities. The notebook implementation allows for detailed customization of the agent behaviors and interactions.</p>
+                    
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">How to Use the Notebook</h3>
+                    <ol class="list-decimal pl-6 mb-6 space-y-2 text-gray-600">
+                        <li>Clone the GitHub repository</li>
+                        <li>Install the required dependencies</li>
+                        <li>Set up your API keys for OpenAI and SerperDev</li>
+                        <li>Run the notebook and provide a job posting URL and resume file</li>
+                        <li>The agents will process the inputs and generate tailored application materials</li>
+                    </ol>
+                </div>
+                
+                <div>
+                    <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Agent Workflow</h3>
+                        <p class="text-gray-600 mb-4">The CrewAI agents work together in the following sequence:</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 text-blue-800 p-2 rounded-full mr-3">1</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-700">Job Analyzer</h4>
+                                    <p class="text-gray-600">Scrapes and analyzes the job posting to extract requirements, skills, and qualifications</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 text-blue-800 p-2 rounded-full mr-3">2</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-700">Resume Analyzer</h4>
+                                    <p class="text-gray-600">Parses the resume to identify skills, experience, and qualifications</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 text-blue-800 p-2 rounded-full mr-3">3</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-700">ATS Evaluator</h4>
+                                    <p class="text-gray-600">Compares job requirements with resume content to identify matches and gaps</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 text-blue-800 p-2 rounded-full mr-3">4</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-700">Company Researcher</h4>
+                                    <p class="text-gray-600">Gathers information about the company to provide context for applications</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 text-blue-800 p-2 rounded-full mr-3">5</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-700">Cover Letter Generator</h4>
+                                    <p class="text-gray-600">Creates a tailored cover letter with relevant experience and company details</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 text-blue-800 p-2 rounded-full mr-3">6</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-700">Resume Optimizer</h4>
+                                    <p class="text-gray-600">Reorganizes and enhances the resume to better match job requirements</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-center">
+                        <a href="https://github.com/jamonhin/Jobseeker-CrewAI-Agent" class="bg-gray-800 hover:bg-gray-900 text-white font-medium py-2 px-6 rounded-full shadow-md transition duration-300 flex items-center">
+                            <i class="fab fa-github mr-2"></i> View CrewAI Notebook on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Projects -->
+    <div class="bg-white py-16">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <a href="index.html#projects" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full shadow-md transition duration-300">
+                <i class="fas fa-arrow-left mr-2"></i> Back to All Projects
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>© 2024 James Montoya. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
