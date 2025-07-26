@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Montoya - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: white;
+            font-size: 12px;
+        }
+        
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            z-index: 1000;
+        }
+        
+        .print-button:hover {
+            background: #1d4ed8;
+        }
+        
+        @media print {
+            .print-button {
+                display: none;
+            }
+        }
+        
+        .resume-container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            background: white;
+            min-height: 11in;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #2563eb;
+        }
+        
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1f2937;
+            margin-bottom: 5px;
+        }
+        
+        .title {
+            font-size: 16px;
+            color: #2563eb;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .contact-info {
+            font-size: 11px;
+            color: #666;
+        }
+        
+        .section {
+            margin-bottom: 18px;
+        }
+        
+        .section-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #1f2937;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 3px;
+        }
+        
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 12px;
+        }
+        
+        .job-title {
+            font-weight: bold;
+            color: #1f2937;
+            font-size: 12px;
+        }
+        
+        .company {
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 12px;
+        }
+        
+        .date {
+            color: #666;
+            font-size: 11px;
+            float: right;
+        }
+        
+        .location {
+            color: #666;
+            font-size: 11px;
+            font-style: italic;
+        }
+        
+        .description {
+            margin-top: 4px;
+            color: #374151;
+            font-size: 11px;
+        }
+        
+        .description ul {
+            margin-left: 15px;
+            margin-top: 3px;
+        }
+        
+        .description li {
+            margin-bottom: 2px;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 5px;
+        }
+        
+        .skill-category {
+            margin-bottom: 8px;
+        }
+        
+        .skill-category-title {
+            font-weight: bold;
+            color: #1f2937;
+            font-size: 11px;
+            margin-bottom: 3px;
+        }
+        
+        .skill-list {
+            color: #374151;
+            font-size: 11px;
+        }
+        
+        .two-column {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .left-column {
+            flex: 2;
+        }
+        
+        .right-column {
+            flex: 1;
+        }
+        
+        .summary {
+            text-align: justify;
+            color: #374151;
+            font-size: 11px;
+            line-height: 1.5;
+        }
+        
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .project-title {
+            font-weight: bold;
+            color: #1f2937;
+            font-size: 12px;
+        }
+        
+        .tech-stack {
+            color: #2563eb;
+            font-size: 10px;
+            font-style: italic;
+            margin-top: 2px;
+        }
+        
+        @media print {
+            body {
+                font-size: 11px;
+            }
+            .resume-container {
+                margin: 0;
+                padding: 0.3in;
+                box-shadow: none;
+            }
+            .section {
+                margin-bottom: 15px;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button" onclick="window.print()">📄 Save as PDF</button>
+    
+    <div class="resume-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="name">JAMES MONTOYA</div>
+            <div class="title">Artificial Intelligence Developer | Workflow Automation & AI Integration using N8N</div>
+            <div class="contact-info">
+                Sydney, Australia | jamonhin@gmail.com | LinkedIn: /in/jamesmontoya
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="section">
+            <div class="section-title">Professional Summary</div>
+            <div class="summary">
+                Experienced AI Developer and Data Engineer with 12+ years bridging traditional data engineering with cutting-edge AI technologies. Specialized in N8N workflow automation, multi-agent AI systems, and enterprise data integration. Proven track record of transforming complex data systems into actionable business insights, with recent focus on developing AI-powered automation solutions that reduce manual processes by up to 95%. Permanent resident of Australia with Master's in Software Engineering (AI) and extensive experience in financial services and telecommunications.
+            </div>
+        </div>
+
+        <div class="two-column">
+            <div class="left-column">
+                <!-- Professional Experience -->
+                <div class="section">
+                    <div class="section-title">Professional Experience</div>
+                    
+                    <div class="experience-item clearfix">
+                        <div class="job-title">Artificial Intelligence Developer - Workflow Automation & AI Integration</div>
+                        <div class="date">Nov 2024 - Present</div>
+                        <div class="company">Freelance/Contract</div>
+                        <div class="location">Sydney, Australia</div>
+                        <div class="description">
+                            <ul>
+                                <li>Developed AI-powered automation systems using N8N framework for process optimization</li>
+                                <li>Implemented email parsing, CRM integration, and document processing workflows</li>
+                                <li>Created multi-agent systems using CrewAI and LangChain for job application optimization</li>
+                                <li>Built automated resume processing pipeline reducing manual data entry by 95%</li>
+                                <li>Engineered intelligent tender/deal processing system with 90%+ accuracy</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item clearfix">
+                        <div class="job-title">Data Analyst</div>
+                        <div class="date">Nov 2023 - Nov 2024</div>
+                        <div class="company">Various Projects</div>
+                        <div class="location">Sydney, Australia</div>
+                        <div class="description">
+                            <ul>
+                                <li>Developed Docker-based ML environments for scalable model development</li>
+                                <li>Built predictive models for nonprofit donor behavior analysis using clustering algorithms</li>
+                                <li>Implemented automated ETL processes using Apache Airflow</li>
+                                <li>Created comprehensive data pipelines for machine learning workflows</li>
+                                <li>Optimized database performance and data quality processes</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item clearfix">
+                        <div class="job-title">Data Engineer & Business Intelligence Developer</div>
+                        <div class="date">2014 - 2017</div>
+                        <div class="company">Tigo (Telecommunications)</div>
+                        <div class="location">Medellín, Colombia</div>
+                        <div class="description">
+                            <ul>
+                                <li>Developed mobile KPI dashboard application using Apache PhoneGap</li>
+                                <li>Created ETL packages in SSIS for seamless multi-source data integration</li>
+                                <li>Automated reporting systems using SQL Server, reducing manual effort by 60%</li>
+                                <li>Implemented data scraping and processing solutions with Python</li>
+                                <li>Designed real-time data visualization systems for executive decision-making</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item clearfix">
+                        <div class="job-title">Analyst Developer & Database Specialist</div>
+                        <div class="date">2006 - 2014</div>
+                        <div class="company">Grupo Bancolombia (Financial Services)</div>
+                        <div class="location">Medellín, Colombia</div>
+                        <div class="description">
+                            <ul>
+                                <li>Led treasury database reporting migration project ensuring seamless transition</li>
+                                <li>Implemented reporting solutions using Datamart and SAP Business Objects</li>
+                                <li>Managed Murex system transition, optimizing financial data processes</li>
+                                <li>Created VBA macros automating spreadsheet-to-production migrations</li>
+                                <li>Leveraged Oracle Database and Business Objects for stakeholder reporting</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Projects -->
+                <div class="section">
+                    <div class="section-title">Featured Projects</div>
+                    
+                    <div class="project-item">
+                        <div class="project-title">Jobseeker Multi-Agent System</div>
+                        <div class="date">Jan 2025</div>
+                        <div class="tech-stack">Python, LangChain, CrewAI, OpenAI, React</div>
+                        <div class="description">
+                            Developed intelligent job application system analyzing postings and generating tailored cover letters and optimized resumes using multi-agent AI architecture.
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-title">Automated Resume Processing & CRM Integration</div>
+                        <div class="date">Jul 2025</div>
+                        <div class="tech-stack">N8N, LLM Models, Document Parsing APIs, CRM Integration</div>
+                        <div class="description">
+                            End-to-end pipeline transforming unstructured documents into structured candidate profiles, reducing manual data entry by 95% for recruitment consultancy.
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-title">Cleaning Company Management System</div>
+                        <div class="date">May 2025</div>
+                        <div class="tech-stack">PostgreSQL, N8N, OpenAI GPT, Docker</div>
+                        <div class="description">
+                            Multi-agent system automating operations and providing actionable insights for cleaning service providers with 30+ interrelated database tables.
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-title">ML-Powered Donor Analysis System</div>
+                        <div class="date">2023-2024</div>
+                        <div class="tech-stack">Docker, Python, Apache Airflow, Scikit-Learn, KMeans</div>
+                        <div class="description">
+                            Comprehensive system analyzing donor behavior and predicting contributions for nonprofit organizations using containerized ML environments.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <!-- Technical Skills -->
+                <div class="section">
+                    <div class="section-title">Technical Skills</div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-category-title">AI & Automation</div>
+                        <div class="skill-list">N8N, LLM, Agentic AI, LangChain, CrewAI, OpenAI GPT, LlamaIndex</div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-title">Programming</div>
+                        <div class="skill-list">Python, JavaScript, SQL, Node.js, React.js, VBA</div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-title">Databases</div>
+                        <div class="skill-list">PostgreSQL, SQL Server, Oracle, Neo4j, Vector Databases</div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-title">Data Engineering</div>
+                        <div class="skill-list">Apache Airflow, ETL Processes, Docker, MLOps, BigQuery</div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-title">Integration & Cloud</div>
+                        <div class="skill-list">API Integrations, HubSpot, Cloud Integration, CRM Systems</div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-title">Analytics & Visualization</div>
+                        <div class="skill-list">Tableau, Power BI, Excel, Machine Learning, Scikit-Learn</div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="section">
+                    <div class="section-title">Education</div>
+                    
+                    <div class="education-item clearfix">
+                        <div class="job-title">Master of Software Engineering (AI Specialization)</div>
+                        <div class="date">2021 - 2024</div>
+                        <div class="company">Torrens University Australia</div>
+                        <div class="location">Sydney, Australia</div>
+                        <div class="description">
+                            Advanced studies in machine learning, artificial intelligence, and software development with focus on practical AI applications.
+                        </div>
+                    </div>
+
+                    <div class="education-item clearfix">
+                        <div class="job-title">Specialization in Software Development</div>
+                        <div class="date">2013</div>
+                        <div class="company">Universidad de Medellín</div>
+                        <div class="location">Medellín, Colombia</div>
+                        <div class="description">
+                            Software development lifecycle, Scrum methodologies, requirements elicitation, and software engineering best practices.
+                        </div>
+                    </div>
+
+                    <div class="education-item clearfix">
+                        <div class="job-title">Bachelor of Computer Science</div>
+                        <div class="date">2009</div>
+                        <div class="company">Politécnico Jaime Isaza Cadavid</div>
+                        <div class="location">Medellín, Colombia</div>
+                        <div class="description">
+                            Foundation in computer science, programming, databases, and software development principles.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Achievements -->
+                <div class="section">
+                    <div class="section-title">Key Achievements</div>
+                    <div class="description">
+                        <ul>
+                            <li>Reduced manual data entry by 95% through AI automation</li>
+                            <li>Achieved 90%+ accuracy in intelligent document processing</li>
+                            <li>Successfully migrated complex financial database systems</li>
+                            <li>Designed 30+ table database architectures</li>
+                            <li>Implemented real-time dashboard solutions</li>
+                            <li>Australian Permanent Resident since 2024</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Core Competencies -->
+                <div class="section">
+                    <div class="section-title">Core Competencies</div>
+                    <div class="description">
+                        <ul>
+                            <li>Workflow Automation Design</li>
+                            <li>Multi-Agent AI Systems</li>
+                            <li>Enterprise Data Integration</li>
+                            <li>Database Architecture</li>
+                            <li>Business Process Optimization</li>
+                            <li>Cross-functional Team Leadership</li>
+                            <li>Agile Development Methodologies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
