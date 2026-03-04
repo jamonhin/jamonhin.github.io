@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise RAG Document Chatbot - James Montoya</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="../index.html" class="flex items-center py-4">
+                            <span class="font-semibold text-gray-500 text-lg">James Montoya</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <a href="../index.html#about" class="py-4 px-2 text-gray-500 hover:text-blue-500">About</a>
+                    <a href="../index.html#skills" class="py-4 px-2 text-gray-500 hover:text-blue-500">Skills</a>
+                    <a href="../index.html#mystory" class="py-4 px-2 text-gray-500 hover:text-blue-500">My Story</a>
+                    <a href="../index.html#projects" class="py-4 px-2 text-gray-500 hover:text-blue-500">Projects</a>
+                    <a href="../index.html#timeline" class="py-4 px-2 text-gray-500 hover:text-blue-500">Journey</a>
+                    <a href="../index.html#contact" class="py-4 px-2 text-gray-500 hover:text-blue-500">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <div class="bg-white py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 md:pr-10">
+                    <img src="../assets/img/Graph-rag-Pr2/graph-model.png" alt="ArangoDB Graph Model Architecture" class="w-full h-64 md:h-96 object-cover rounded-xl shadow-lg">
+                </div>
+                <div class="md:w-1/2 mt-8 md:mt-0">
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Enterprise RAG Document Chatbot</h1>
+                    <p class="text-xl text-gray-600 mb-4">Intelligent Knowledge Retrieval System</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">AWS Bedrock</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">ArangoDB</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">N8N</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Graph Database</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Claude AI</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Titan Embeddings</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Docker</span>
+                    </div>
+                    <p class="text-gray-600 mb-6">An end-to-end AI-powered document chatbot enabling brokers to instantly query over 10,000 operational documents using natural language — returning verbatim, source-attributed answers with confidence scores above 0.9 and zero hallucination.</p>
+
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
+                        <p class="text-blue-700 font-semibold">Private Client Project — Active Development</p>
+                        <p class="text-blue-600 text-sm">Australian Mortgage Broker Industry — Feb 2026 – Ongoing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="bg-gray-50 py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-3xl font-bold text-blue-600 mb-2">&gt;0.9</div>
+                    <div class="text-gray-600 text-sm">Retrieval Confidence Score</div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-3xl font-bold text-green-600 mb-2">10,000+</div>
+                    <div class="text-gray-600 text-sm">Documents Supported</div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-3xl font-bold text-purple-600 mb-2">&lt;2s</div>
+                    <div class="text-gray-600 text-sm">Query Response Time</div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-3xl font-bold text-orange-600 mb-2">12x</div>
+                    <div class="text-gray-600 text-sm">AI Cost Reduction</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Details -->
+    <div class="bg-white py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="md:col-span-2">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Project Overview</h2>
+                    <div class="prose max-w-none text-gray-600">
+                        <p class="mb-4">Built for a leading Australian mortgage broker company, this system solves a critical operational problem: brokers spend excessive time manually searching through hundreds of checklists, bank-specific guides, templates, settlement procedures, and forms to answer time-sensitive client questions. The Enterprise RAG Document Chatbot replaces that manual process with an AI-powered natural language interface that retrieves verbatim answers from the correct source document — instantly, at scale, and with full traceability.</p>
+
+                        <h3 class="text-xl font-bold text-gray-800 mt-8 mb-4">Problem Statement</h3>
+                        <ul class="list-disc pl-6 mb-6 space-y-2">
+                            <li><strong>Operational Bottleneck:</strong> 50+ brokers manually searching 10,000+ documents for time-critical information during client calls and settlements</li>
+                            <li><strong>Accuracy Risk:</strong> Outdated documents or incorrect manual lookups introduced compliance and settlement risk</li>
+                            <li><strong>No Source Attribution:</strong> Standard keyword search returned lists of documents — not answers — requiring brokers to read and interpret content themselves</li>
+                            <li><strong>Hallucination Risk:</strong> Generic AI tools fabricated procedural details, unacceptable in a regulated financial services environment</li>
+                            <li><strong>Scale:</strong> Document library spans PDF, DOCX, XLSX, CSV, and image formats with continuous updates from lenders</li>
+                        </ul>
+
+                        <h3 class="text-xl font-bold text-gray-800 mt-8 mb-4">Document Ingestion Pipeline</h3>
+                        <ol class="list-decimal pl-6 mb-6 space-y-2">
+                            <li><strong>Source:</strong> Documents stored in AWS S3 across multiple lender-specific folders</li>
+                            <li><strong>Extraction:</strong> AWS Bedrock Data Automation (BDA) processes PDF, DOCX, XLSX, CSV, and image files into structured markdown</li>
+                            <li><strong>Semantic Chunking:</strong> N8N workflow splits documents into semantically coherent chunks (not fixed token splits) to preserve context boundaries</li>
+                            <li><strong>AI Enhancement:</strong> Claude Haiku enriches each chunk with contextual metadata — document type, lender, relevant process stage, and inferred intent</li>
+                            <li><strong>Entity Extraction:</strong> Claude Haiku identifies named entities (lenders, forms, conditions, deadlines) and their relationships</li>
+                            <li><strong>Graph Insertion:</strong> Documents, chunks, lenders, forms, and entities stored as ArangoDB vertices; relationships stored as directed edges enabling graph traversal queries</li>
+                            <li><strong>Vector Embedding:</strong> AWS Titan Text Embeddings V2 generates vector representations for each chunk, stored alongside the graph for hybrid search</li>
+                        </ol>
+
+                        <h3 class="text-xl font-bold text-gray-800 mt-8 mb-4">Query Pipeline</h3>
+                        <ol class="list-decimal pl-6 mb-6 space-y-2">
+                            <li><strong>Natural Language Query</strong> → Intent classification determines query type (procedural, document lookup, lender-specific, comparison)</li>
+                            <li><strong>Hybrid Retrieval:</strong> Vector similarity search (Titan Embeddings) combined with AQL graph traversal — graph paths surface related entities keyword search cannot find</li>
+                            <li><strong>Confidence Scoring:</strong> Each retrieved chunk assigned a confidence score based on vector similarity, graph path depth, and entity match count</li>
+                            <li><strong>Context Assembly:</strong> Top-ranked chunks assembled into a grounded context window with source attribution metadata</li>
+                            <li><strong>Verbatim Generation:</strong> Claude Haiku generates responses anchored strictly to retrieved content — no inference beyond source material</li>
+                            <li><strong>Source Attribution:</strong> Every response includes document name, section, and lender origin so brokers can verify and cite the source</li>
+                        </ol>
+
+                        <h3 class="text-xl font-bold text-gray-800 mt-8 mb-4">State Manager — Document Lifecycle Control</h3>
+                        <p class="mb-4">A centralised N8N State Manager workflow governs the entire document lifecycle with atomic locking to prevent concurrent processing conflicts — critical when multiple document updates arrive simultaneously from different lenders:</p>
+                        <ul class="list-disc pl-6 mb-6 space-y-2">
+                            <li>Detects new/updated/deleted documents via S3 event triggers</li>
+                            <li>Acquires an atomic lock on the document record before processing begins</li>
+                            <li>Coordinates the full pipeline: extract → chunk → enhance → embed → upsert graph</li>
+                            <li>Releases lock and updates document status on completion or failure</li>
+                            <li>Handles version conflicts — newer versions supersede older ones without manual intervention</li>
+                        </ul>
+
+                        <h3 class="text-xl font-bold text-gray-800 mt-8 mb-4">Strategic Model Selection — 12x Cost Reduction</h3>
+                        <p class="mb-4">A deliberate model selection strategy reduced AI inference costs by 12x compared to using a single frontier model throughout:</p>
+                        <ul class="list-disc pl-6 mb-6 space-y-2">
+                            <li><strong>AWS Bedrock Data Automation:</strong> Handles document parsing (PDF, images) — purpose-built, no LLM cost per page</li>
+                            <li><strong>Claude Haiku:</strong> Used for contextual enhancement, entity extraction, and response generation — high throughput, low cost, sufficient accuracy for structured tasks</li>
+                            <li><strong>Titan Embeddings V2:</strong> Vector generation at AWS-native pricing, no third-party API calls</li>
+                            <li>Claude Sonnet reserved only for complex multi-document synthesis queries where higher reasoning is demonstrably needed</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="md:col-span-1">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Project Information</h2>
+
+                    <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Project Type</h3>
+                        <p class="text-gray-600 mb-2">Private Client Project</p>
+                        <p class="text-sm text-gray-500">Australian Mortgage Broker Industry</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Timeline</h3>
+                        <p class="text-gray-600">Feb 2026 – Ongoing</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Role</h3>
+                        <p class="text-gray-600">AI/ML Engineer & Solutions Architect</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Document Formats</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-sm">PDF</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-sm">DOCX</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-sm">XLSX</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-sm">CSV</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-sm">Images</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Technologies Used</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">AWS Bedrock</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Bedrock Data Automation</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Claude Haiku</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Titan Embeddings V2</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">ArangoDB</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">AQL</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">N8N</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">AWS EC2</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">AWS S3</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">AWS IAM</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Docker Compose</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Caddy</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">PostgreSQL</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">JavaScript</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Python</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">AWS SigV4</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 bg-blue-50 p-6 rounded-lg">
+                        <h3 class="text-lg font-bold text-gray-800 mb-3">Skills Demonstrated</h3>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i>RAG System Architecture</li>
+                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i>Graph Database Design</li>
+                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i>AWS Bedrock Integration</li>
+                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i>N8N Workflow Orchestration</li>
+                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i>Document Processing Pipelines</li>
+                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i>Vector & Graph Hybrid Search</li>
+                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i>AI Cost Optimisation</li>
+                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i>Cloud Infrastructure (AWS)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technical Highlights -->
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Technical Highlights</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-600 text-3xl mb-4"><i class="fas fa-project-diagram"></i></div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Graph + Vector Hybrid Retrieval</h3>
+                    <p class="text-gray-600 text-sm">AQL graph traversals surface related entities and document chains that pure vector search cannot find. Combined with Titan Embeddings vector search, the hybrid approach achieves confidence scores above 0.9 — up from a 0.3 baseline with vector-only retrieval.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-green-600 text-3xl mb-4"><i class="fas fa-file-alt"></i></div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">AWS Bedrock Data Automation</h3>
+                    <p class="text-gray-600 text-sm">AWS BDA handles multi-format document extraction (PDF, DOCX, XLSX, CSV, images) into structured markdown without per-page LLM costs, processing at scale before AI enhancement stages begin.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-purple-600 text-3xl mb-4"><i class="fas fa-lock"></i></div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Atomic State Manager</h3>
+                    <p class="text-gray-600 text-sm">Centralised N8N State Manager workflow with atomic locking prevents race conditions when concurrent document updates arrive from multiple lenders simultaneously — critical for a continuously updating document library.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-orange-600 text-3xl mb-4"><i class="fas fa-quote-right"></i></div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Verbatim, Source-Attributed Answers</h3>
+                    <p class="text-gray-600 text-sm">Responses are grounded strictly in retrieved document content — no inference beyond source material. Every answer includes document name, section, and lender origin for compliance traceability in a regulated financial services environment.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-red-600 text-3xl mb-4"><i class="fas fa-dollar-sign"></i></div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">12x AI Cost Reduction</h3>
+                    <p class="text-gray-600 text-sm">Strategic model selection — BDA for extraction, Claude Haiku for enhancement and generation, Titan for embeddings — reduced AI inference costs by 12x compared to using a frontier model end-to-end, without sacrificing retrieval accuracy.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-indigo-600 text-3xl mb-4"><i class="fas fa-users"></i></div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">50+ Concurrent Users</h3>
+                    <p class="text-gray-600 text-sm">Architecture designed for simultaneous access by the full broker team — Docker Compose deployment on AWS EC2 with Caddy reverse proxy, N8N workflow queuing, and ArangoDB connection pooling ensuring consistent sub-2-second response times under load.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screenshots -->
+    <div class="bg-white py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">System Architecture & Workflows</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="rounded-xl overflow-hidden shadow-md">
+                    <img src="../assets/img/Graph-rag-Pr2/graph-model.png" alt="ArangoDB Graph Model" class="w-full object-cover">
+                    <div class="p-4 bg-gray-50">
+                        <p class="text-sm font-semibold text-gray-700">ArangoDB Graph Model</p>
+                        <p class="text-xs text-gray-500">Vertices and edges representing documents, chunks, lenders, forms, and entity relationships</p>
+                    </div>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-md">
+                    <img src="../assets/img/Graph-rag-Pr2/read-docs-AWS-s3.png" alt="AWS S3 Document Ingestion" class="w-full object-cover">
+                    <div class="p-4 bg-gray-50">
+                        <p class="text-sm font-semibold text-gray-700">AWS S3 Document Ingestion</p>
+                        <p class="text-xs text-gray-500">N8N workflow reading and routing documents from S3 into the processing pipeline</p>
+                    </div>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-md">
+                    <img src="../assets/img/Graph-rag-Pr2/extract-docs.png" alt="Document Extraction Workflow" class="w-full object-cover">
+                    <div class="p-4 bg-gray-50">
+                        <p class="text-sm font-semibold text-gray-700">Document Extraction Workflow</p>
+                        <p class="text-xs text-gray-500">AWS Bedrock Data Automation processing multi-format documents into structured markdown</p>
+                    </div>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-md">
+                    <img src="../assets/img/Graph-rag-Pr2/extract-chunks.png" alt="Semantic Chunking Pipeline" class="w-full object-cover">
+                    <div class="p-4 bg-gray-50">
+                        <p class="text-sm font-semibold text-gray-700">Semantic Chunking Pipeline</p>
+                        <p class="text-xs text-gray-500">N8N workflow for semantic chunking, AI contextual enhancement, and entity extraction</p>
+                    </div>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-md md:col-span-2">
+                    <img src="../assets/img/Graph-rag-Pr2/entity-to-entity.png" alt="Entity Relationship Extraction" class="w-full object-cover">
+                    <div class="p-4 bg-gray-50">
+                        <p class="text-sm font-semibold text-gray-700">Entity-to-Entity Relationship Extraction</p>
+                        <p class="text-xs text-gray-500">Graph edges connecting lenders, forms, conditions, and procedures extracted by Claude Haiku</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Projects -->
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <a href="../index.html#projects" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full shadow-md transition duration-300">
+                <i class="fas fa-arrow-left mr-2"></i> Back to All Projects
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>© 2024 James Montoya. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

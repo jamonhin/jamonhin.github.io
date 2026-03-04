@@ -170,7 +170,71 @@
             <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">A showcase of my latest projects, demonstrating my skills in AI development, RAG systems, data engineering, and machine learning applications.</p>
                 
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- Project 1 - AI Training Course -->
+                <!-- Project 1 - Enterprise RAG Document Chatbot -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
+                    <div class="h-48 bg-gray-200 relative" id="rag-chatbot-carousel">
+                        <!-- Carousel Images -->
+                        <div class="carousel-container relative w-full h-full overflow-hidden">
+                            <img src="assets/img/Graph-rag-Pr2/graph-model.png" alt="ArangoDB Graph Model" class="carousel-image w-full h-full object-cover active">
+                            <img src="assets/img/Graph-rag-Pr2/read-docs-AWS-s3.png" alt="AWS S3 Document Ingestion" class="carousel-image w-full h-full object-cover">
+                            <img src="assets/img/Graph-rag-Pr2/extract-docs.png" alt="Document Extraction Pipeline" class="carousel-image w-full h-full object-cover">
+                            <img src="assets/img/Graph-rag-Pr2/extract-chunks.png" alt="Semantic Chunking Workflow" class="carousel-image w-full h-full object-cover">
+                            <img src="assets/img/Graph-rag-Pr2/entity-to-entity.png" alt="Entity Relationship Graph" class="carousel-image w-full h-full object-cover">
+                        </div>
+
+                        <!-- Navigation Arrows -->
+                        <button class="carousel-btn prev-btn absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <button class="carousel-btn next-btn absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+
+                        <!-- Carousel Indicators -->
+                        <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-1">
+                            <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300 active" data-slide="0"></button>
+                            <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300" data-slide="1"></button>
+                            <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300" data-slide="2"></button>
+                            <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300" data-slide="3"></button>
+                            <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300" data-slide="4"></button>
+                        </div>
+
+                        <div class="absolute top-0 right-0 bg-green-600 text-white px-3 py-1 m-2 rounded-full text-xs">Feb 2026 – Ongoing</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Enterprise RAG Document Chatbot — Intelligent Knowledge Retrieval System</h3>
+                        <p class="text-gray-600 mb-4">Production-grade RAG chatbot enabling 50+ concurrent users to query 10,000+ business documents with verbatim accuracy and confidence scores above 0.9. Built on AWS with N8N workflow orchestration, ArangoDB graph database, and AI-powered document processing — delivering answers in under 2 seconds with full source attribution and zero hallucination.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">AWS Bedrock</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">ArangoDB</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">N8N</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Graph Database</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Claude AI</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Titan Embeddings</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">RAG</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Docker</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">JavaScript</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Python</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="projects/rag-document-chatbot.html" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                View Details
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                            <a href="projects/rag-document-chatbot.html" class="text-gray-500 hover:text-gray-700">
+                                <i class="fas fa-info-circle text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 - AI Training Course -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
                     <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative flex items-center justify-center">
                         <div class="text-white text-center p-6">
@@ -204,7 +268,7 @@
                     </div>
                 </div>
 
-                <!-- Project 2 - AI Candidate Matching System -->
+                <!-- Project 4 - AI Candidate Matching System -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
                     <div class="h-48 bg-gray-200 relative" id="recruitment-carousel">
                         <!-- Carousel Images -->
@@ -269,7 +333,7 @@
                     </div>
                 </div>
 
-                <!-- Project 3 - AI Mortgage Broker Assistant -->
+                <!-- Project 5 - AI Mortgage Broker Assistant -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
                     <div class="h-48 bg-gray-200 relative">
                         <img src="assets/img/mortgage/image-name.png" alt="AI Mortgage Broker Assistant Architecture" class="w-full h-full object-cover">
@@ -302,7 +366,7 @@
                     </div>
                 </div>
 
-                <!-- Project 4 - RAG System -->
+                <!-- Project 6 - RAG System -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
                     <div class="h-48 bg-gray-200 relative" id="rag-carousel">
                         <!-- Carousel Images -->
@@ -766,7 +830,8 @@
         }
         
         #rag-carousel:hover .carousel-btn,
-        #recruitment-carousel:hover .carousel-btn {
+        #recruitment-carousel:hover .carousel-btn,
+        #rag-chatbot-carousel:hover .carousel-btn {
             opacity: 1;
         }
     </style>
@@ -860,6 +925,7 @@
                 startAutoSlide();
             }
 
+            initCarousel('rag-chatbot-carousel');
             initCarousel('rag-carousel');
             initCarousel('recruitment-carousel');
         });
