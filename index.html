@@ -122,6 +122,9 @@
 
                 <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Apache Airflow</span>
                 <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Vector Databases</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">ArangoDB</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Graph Database</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">AQL</span>
                 <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">LangChain</span>
                 <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">MLOps</span>
                 <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">BigQuery</span>
@@ -201,7 +204,71 @@
                     </div>
                 </div>
 
-                <!-- Project 2 - AI Mortgage Broker Assistant -->
+                <!-- Project 2 - AI Candidate Matching System -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
+                    <div class="h-48 bg-gray-200 relative" id="recruitment-carousel">
+                        <!-- Carousel Images -->
+                        <div class="carousel-container relative w-full h-full overflow-hidden">
+                            <img src="assets/img/Graph-RAG-Pr1/graph-databse.png" alt="ArangoDB Graph Database Visualisation" class="carousel-image w-full h-full object-cover active">
+                            <img src="assets/img/Graph-RAG-Pr1/entities-extraction.png" alt="CV Entities Extraction Pipeline" class="carousel-image w-full h-full object-cover">
+                            <img src="assets/img/Graph-RAG-Pr1/teams-chatbot.png" alt="Teams Chatbot Interface" class="carousel-image w-full h-full object-cover">
+                            <img src="assets/img/Graph-RAG-Pr1/webhook-chatbot.png" alt="Webhook Chatbot" class="carousel-image w-full h-full object-cover">
+                            <img src="assets/img/Graph-RAG-Pr1/teams-messages-reader.png" alt="Teams Messages Reader" class="carousel-image w-full h-full object-cover">
+                        </div>
+
+                        <!-- Navigation Arrows -->
+                        <button class="carousel-btn prev-btn absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <button class="carousel-btn next-btn absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+
+                        <!-- Carousel Indicators -->
+                        <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-1">
+                            <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300 active" data-slide="0"></button>
+                            <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300" data-slide="1"></button>
+                            <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300" data-slide="2"></button>
+                            <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300" data-slide="3"></button>
+                            <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300" data-slide="4"></button>
+                        </div>
+
+                        <div class="absolute top-0 right-0 bg-green-600 text-white px-3 py-1 m-2 rounded-full text-xs">Feb 2026</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">AI-Powered Candidate Matching & Retrieval System Using N8N and ArangoDB</h3>
+                        <p class="text-gray-600 mb-4">End-to-end intelligent recruitment candidate matching system combining graph database technology with AI-powered CV extraction and dual-retrieval search. Processes CVs through a multi-stage pipeline, stores candidates as a graph, and enables recruiters to find qualified candidates using both AQL graph queries and semantic vector search simultaneously.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">N8N</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">ArangoDB</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">AWS EC2</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Graph Database</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">AQL</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">GPT-4.1 Mini</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Vector Embeddings</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Semantic Search</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Nginx</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">JavaScript</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="projects/recruitment-matching-system.html" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                View Details
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                            <a href="projects/recruitment-matching-system.html" class="text-gray-500 hover:text-gray-700">
+                                <i class="fas fa-info-circle text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 - AI Mortgage Broker Assistant -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
                     <div class="h-48 bg-gray-200 relative">
                         <img src="assets/img/mortgage/image-name.png" alt="AI Mortgage Broker Assistant Architecture" class="w-full h-full object-cover">
@@ -234,7 +301,7 @@
                     </div>
                 </div>
 
-                <!-- Project 3 - RAG System -->
+                <!-- Project 4 - RAG System -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
                     <div class="h-48 bg-gray-200 relative" id="rag-carousel">
                         <!-- Carousel Images -->
@@ -308,7 +375,7 @@
                     </div>
                 </div>
 
-                <!-- Project 4 - Jobseeker System -->
+                <!-- Project 5 - Jobseeker System -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
                     <div class="h-48 bg-gray-200 relative">
                         <iframe 
@@ -346,7 +413,7 @@
                     </div>
                 </div>
 
-                <!-- Project 5 - ML-Powered Donor Analysis -->
+                <!-- Project 6 - ML-Powered Donor Analysis -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
                     <div class="h-48 bg-gray-200 relative">
                         <img src="assets/img/cluster/cluster-img1.png" alt="ML-Powered Donor Analysis" class="w-full h-full object-cover">
@@ -377,7 +444,7 @@
                     </div>
                 </div>
 
-                <!-- Project 6 - Comprehensive Cleaning System -->
+                <!-- Project 7 - Comprehensive Cleaning System -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
                     <div class="h-48 bg-gray-200 relative">
                         <img src="assets/img/n8n/n8n_workflow.png" alt="Comprehensive Cleaning Company Management System" class="w-full h-full object-cover">
@@ -406,7 +473,7 @@
                     </div>
                 </div>
 
-                <!-- Project 7 - Automated Resume Processing -->
+                <!-- Project 8 - Automated Resume Processing -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
                     <div class="h-48 bg-gray-200 relative">
                         <img src="assets/img/n8n/resume_processing.png" alt="Automated Resume Processing & CRM Integration System" class="w-full h-full object-cover">
@@ -439,7 +506,7 @@
                     </div>
                 </div>
 
-                <!-- Project 8 - Automated Deal Processing -->
+                <!-- Project 9 - Automated Deal Processing -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
                     <div class="h-48 bg-gray-200 relative">
                         <img src="assets/img/n8n/email_deals_processing.png" alt="Automated Deal Processing & CRM Pipeline Using N8N Workflows" class="w-full h-full object-cover">
@@ -511,7 +578,7 @@
                                 <span class="text-blue-600 font-medium">Nov 2024 - Present</span>
                             </div>
                             <div class="mt-3 md:mt-0 md:pl-10">
-                                <p class="text-gray-600">Developing enterprise AI solutions using N8N and Amazon Bedrock. Delivered AI-powered mortgage broker assistant for eThink Solutions' client using AWS serverless architecture, processing 150+ documents with 95%+ accuracy. Creating intelligent automation systems including email parsing, CRM integrations, and task automation workflows.</p>
+                                <p class="text-gray-600">Developing enterprise AI solutions using N8N and Amazon Bedrock. Delivered AI-powered mortgage broker assistant for eThink Solutions' client using AWS serverless architecture, processing 150+ documents with 95%+ accuracy. Built an AI-powered candidate matching system using ArangoDB graph database with dual-retrieval search (AQL + semantic vector) for the Australian Defence and Government recruitment sector. Creating intelligent automation systems including email parsing, CRM integrations, and task automation workflows.</p>
                             </div>
                         </div>
                     </div>
@@ -697,7 +764,8 @@
             transition: opacity 0.3s ease;
         }
         
-        #rag-carousel:hover .carousel-btn {
+        #rag-carousel:hover .carousel-btn,
+        #recruitment-carousel:hover .carousel-btn {
             opacity: 1;
         }
     </style>
@@ -729,74 +797,70 @@
             });
         });
 
-        // RAG Project Carousel Functionality
+        // Carousel Functionality
         document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('#rag-carousel .carousel-image');
-            const dots = document.querySelectorAll('#rag-carousel .carousel-dot');
-            const prevBtn = document.querySelector('#rag-carousel .prev-btn');
-            const nextBtn = document.querySelector('#rag-carousel .next-btn');
-            let currentSlide = 0;
-            let autoSlideInterval;
+            function initCarousel(carouselId) {
+                const carousel = document.getElementById(carouselId);
+                if (!carousel) return;
 
-            function showSlide(index) {
-                // Hide all images
-                images.forEach(img => img.classList.remove('active'));
-                dots.forEach(dot => dot.classList.remove('active'));
-                
-                // Show current image and dot
-                images[index].classList.add('active');
-                dots[index].classList.add('active');
-                
-                currentSlide = index;
-            }
+                const images = carousel.querySelectorAll('.carousel-image');
+                const dots = carousel.querySelectorAll('.carousel-dot');
+                const prevBtn = carousel.querySelector('.prev-btn');
+                const nextBtn = carousel.querySelector('.next-btn');
+                let currentSlide = 0;
+                let autoSlideInterval;
 
-            function nextSlide() {
-                const next = (currentSlide + 1) % images.length;
-                showSlide(next);
-            }
+                function showSlide(index) {
+                    images.forEach(img => img.classList.remove('active'));
+                    dots.forEach(dot => dot.classList.remove('active'));
+                    images[index].classList.add('active');
+                    dots[index].classList.add('active');
+                    currentSlide = index;
+                }
 
-            function prevSlide() {
-                const prev = (currentSlide - 1 + images.length) % images.length;
-                showSlide(prev);
-            }
+                function nextSlide() {
+                    showSlide((currentSlide + 1) % images.length);
+                }
 
-            function startAutoSlide() {
-                autoSlideInterval = setInterval(nextSlide, 4000); // Change slide every 4 seconds
-            }
+                function prevSlide() {
+                    showSlide((currentSlide - 1 + images.length) % images.length);
+                }
 
-            function stopAutoSlide() {
-                clearInterval(autoSlideInterval);
-            }
+                function startAutoSlide() {
+                    autoSlideInterval = setInterval(nextSlide, 4000);
+                }
 
-            // Event listeners
-            nextBtn.addEventListener('click', function() {
-                nextSlide();
-                stopAutoSlide();
-                startAutoSlide(); // Restart auto-slide after manual navigation
-            });
+                function stopAutoSlide() {
+                    clearInterval(autoSlideInterval);
+                }
 
-            prevBtn.addEventListener('click', function() {
-                prevSlide();
-                stopAutoSlide();
-                startAutoSlide(); // Restart auto-slide after manual navigation
-            });
-
-            // Dot navigation
-            dots.forEach((dot, index) => {
-                dot.addEventListener('click', function() {
-                    showSlide(index);
+                nextBtn.addEventListener('click', function() {
+                    nextSlide();
                     stopAutoSlide();
-                    startAutoSlide(); // Restart auto-slide after manual navigation
+                    startAutoSlide();
                 });
-            });
 
-            // Pause auto-slide on hover
-            const carousel = document.getElementById('rag-carousel');
-            carousel.addEventListener('mouseenter', stopAutoSlide);
-            carousel.addEventListener('mouseleave', startAutoSlide);
+                prevBtn.addEventListener('click', function() {
+                    prevSlide();
+                    stopAutoSlide();
+                    startAutoSlide();
+                });
 
-            // Start auto-slide
-            startAutoSlide();
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', function() {
+                        showSlide(index);
+                        stopAutoSlide();
+                        startAutoSlide();
+                    });
+                });
+
+                carousel.addEventListener('mouseenter', stopAutoSlide);
+                carousel.addEventListener('mouseleave', startAutoSlide);
+                startAutoSlide();
+            }
+
+            initCarousel('rag-carousel');
+            initCarousel('recruitment-carousel');
         });
     </script>
 </body>
