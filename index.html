@@ -255,6 +255,8 @@
                         <!-- Carousel Images -->
                         <div class="carousel-container relative w-full h-full overflow-hidden">
                             <img src="assets/img/Graph-rag-Pr2/graph-model.png" alt="ArangoDB Graph Model" class="carousel-image w-full h-full object-cover active">
+                            <img src="assets/img/Graph-rag-Pr2/graph-model-1.png" alt="ArangoDB Graph Model Detail 1" class="carousel-image w-full h-full object-cover">
+                            <img src="assets/img/Graph-rag-Pr2/graph-model-2.png" alt="ArangoDB Graph Model Detail 2" class="carousel-image w-full h-full object-cover">
                             <img src="assets/img/Graph-rag-Pr2/read-docs-AWS-s3.png" alt="AWS S3 Document Ingestion" class="carousel-image w-full h-full object-cover">
                             <img src="assets/img/Graph-rag-Pr2/extract-docs.png" alt="Document Extraction Pipeline" class="carousel-image w-full h-full object-cover">
                             <img src="assets/img/Graph-rag-Pr2/extract-chunks.png" alt="Semantic Chunking Workflow" class="carousel-image w-full h-full object-cover">
@@ -280,6 +282,8 @@
                             <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300" data-slide="2"></button>
                             <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300" data-slide="3"></button>
                             <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300" data-slide="4"></button>
+                            <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300" data-slide="5"></button>
+                            <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300" data-slide="6"></button>
                         </div>
 
                         <div class="absolute top-0 right-0 bg-green-600 text-white px-3 py-1 m-2 rounded-full text-xs">Feb 2026 – Ongoing</div>
@@ -554,8 +558,31 @@
 
                 <!-- Automated Deal Processing - Jul 2025 -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
-                    <div class="h-48 bg-gray-200 relative">
-                        <img src="assets/img/n8n/email_deals_processing.png" alt="Automated Deal Processing & CRM Pipeline Using N8N Workflows" class="w-full h-full object-cover">
+                    <div class="h-48 bg-gray-200 relative" id="deal-processing-carousel">
+                        <!-- Carousel Images -->
+                        <div class="carousel-container relative w-full h-full overflow-hidden">
+                            <img src="assets/img/deal-processing/deals-0.png" alt="Deal Processing Pipeline Overview" class="carousel-image w-full h-full object-cover active">
+                            <img src="assets/img/deal-processing/deals-1.png" alt="Deal Processing CRM Integration" class="carousel-image w-full h-full object-cover">
+                        </div>
+
+                        <!-- Navigation Arrows -->
+                        <button class="carousel-btn prev-btn absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <button class="carousel-btn next-btn absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+
+                        <!-- Carousel Indicators -->
+                        <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-1">
+                            <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300 active" data-slide="0"></button>
+                            <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300" data-slide="1"></button>
+                        </div>
+
                         <div class="absolute top-0 right-0 bg-blue-600 text-white px-3 py-1 m-2 rounded-full text-xs">Jul 2025</div>
                     </div>
                     <div class="p-6">
@@ -911,7 +938,8 @@
         #rag-carousel:hover .carousel-btn,
         #recruitment-carousel:hover .carousel-btn,
         #rag-chatbot-carousel:hover .carousel-btn,
-        #voc-carousel:hover .carousel-btn {
+        #voc-carousel:hover .carousel-btn,
+        #deal-processing-carousel:hover .carousel-btn {
             opacity: 1;
         }
     </style>
@@ -1009,6 +1037,7 @@
             initCarousel('rag-carousel');
             initCarousel('recruitment-carousel');
             initCarousel('voc-carousel');
+            initCarousel('deal-processing-carousel');
         });
     </script>
 </body>
