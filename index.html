@@ -417,11 +417,35 @@
 
                 <!-- AI Training Course - Oct 2025 -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
-                    <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative flex items-center justify-center">
-                        <div class="text-white text-center p-6">
-                            <i class="fas fa-graduation-cap text-6xl mb-2"></i>
-                            <p class="text-sm font-medium">AI Training Course</p>
+                    <div class="h-48 bg-gray-200 relative" id="training-carousel">
+                        <!-- Carousel Images -->
+                        <div class="carousel-container relative w-full h-full overflow-hidden">
+                            <img src="assets/img/training/Course-0.png" alt="AI Training Course Overview" class="carousel-image w-full h-full object-cover active">
+                            <img src="assets/img/training/Course-1.png" alt="AI Training Course Module 1" class="carousel-image w-full h-full object-cover">
+                            <img src="assets/img/training/Course-2.png" alt="AI Training Course Module 2" class="carousel-image w-full h-full object-cover">
+                            <img src="assets/img/training/Course-3.png" alt="AI Training Course Module 3" class="carousel-image w-full h-full object-cover">
                         </div>
+
+                        <!-- Navigation Arrows -->
+                        <button class="carousel-btn prev-btn absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <button class="carousel-btn next-btn absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+
+                        <!-- Carousel Indicators -->
+                        <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-1">
+                            <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300 active" data-slide="0"></button>
+                            <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300" data-slide="1"></button>
+                            <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300" data-slide="2"></button>
+                            <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300" data-slide="3"></button>
+                        </div>
+
                         <div class="absolute top-0 right-0 bg-green-600 text-white px-3 py-1 m-2 rounded-full text-xs">Oct 2025</div>
                     </div>
                     <div class="p-6">
@@ -939,7 +963,8 @@
         #recruitment-carousel:hover .carousel-btn,
         #rag-chatbot-carousel:hover .carousel-btn,
         #voc-carousel:hover .carousel-btn,
-        #deal-processing-carousel:hover .carousel-btn {
+        #deal-processing-carousel:hover .carousel-btn,
+        #training-carousel:hover .carousel-btn {
             opacity: 1;
         }
     </style>
@@ -1038,6 +1063,7 @@
             initCarousel('recruitment-carousel');
             initCarousel('voc-carousel');
             initCarousel('deal-processing-carousel');
+            initCarousel('training-carousel');
         });
     </script>
 </body>
