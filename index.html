@@ -147,21 +147,25 @@
 
                 <h3 class="text-xl font-bold text-gray-800 pt-4">What I'm Building Right Now</h3>
 
-                <p>For a Defence &amp; Government recruitment firm, I designed and built an end-to-end AI recruitment pipeline: CV ingestion, structured data extraction (skills, security clearances, capability domains), graph-based storage in ArangoDB, and a conversational AI agent accessible through Microsoft Teams. The system uses a multi-agent architecture — router, query builder, response formatter, and validator — orchestrated through n8n, enabling recruiters to find candidates through natural language queries instead of manual database searches.</p>
+                <p>For a Defence &amp; Government recruitment firm, I designed and built an end-to-end AI recruitment pipeline: CV ingestion, structured data extraction (skills, security clearances, capability domains), graph-based storage in ArangoDB, and a conversational AI agent accessible through Microsoft Teams. The system uses a multi-agent architecture — router, query builder, response formatter, and validator — orchestrated through n8n, enabling recruiters to find candidates through natural language queries instead of manual database searches. I'm now extending that platform into executive reporting: n8n workflows ingest HubSpot contacts and deals into an ArangoDB reporting warehouse, a read-only FastAPI service exposes the metrics over AQL, and two dashboards &mdash; an operational Master Report for the CEO and a revenue Loss Analysis &mdash; are provisioned as code in Grafana and deployed on AWS EC2.</p>
 
                 <p>For eThink Solutions — an award-winning Australian custom application and BI company whose clients include Lyft, GrainCorp, and DP World — I'm building a RAG system that enhances their mortgage broker CRM with document intelligence. The platform processes 150+ loan documents with 95%+ accuracy, classifies and chunks content at granular levels, maps relationships between banks, processes, and compliance requirements through a graph model, and lets staff query everything through natural conversation. Manual document lookup time has been reduced by 80%.</p>
+
+                <p>For an Australian no-interest loan (NILS) provider, I'm building an AI document-validation pipeline for microloan assessments. Caseworkers currently review large document packs by hand against a detailed eligibility handbook; the pipeline classifies and extracts fields from each document &mdash; native-text PDFs and image scans alike &mdash; validates them against eligibility criteria encoded as versioned, auditable decision tables, and returns a triage recommendation with cited reasons. Every extracted value is grounded against the source text, low-confidence fields are escalated for human confirmation, and the system never auto-approves. Real applicant data never leaves the local environment: inference runs locally and all development and testing use synthetic applicants.</p>
+
+                <p>I'm also building Sage, a voice-AI platform that helps elderly Australians preserve their life stories. Elders talk to a warm conversational AI over a direct WebRTC connection to the OpenAI Realtime API and choose, story by story, what their family gets to hear. The consent rule is enforced in Postgres row-level security rather than in the interface, so nothing reaches the family without an explicit yes &mdash; and the whole thing works across eleven languages.</p>
 
                 <p>For not-for-profit organisations, I develop and deliver AI training programs that make AI accessible to non-technical teams, covering safe adoption frameworks, data governance, and practical tool implementation.</p>
 
                 <h3 class="text-xl font-bold text-gray-800 pt-4">Core Technical Stack</h3>
 
                 <ul class="list-disc list-inside space-y-2">
-                    <li><strong>LLM Integration &amp; AI:</strong> Claude (Anthropic API), OpenAI, Gemini, Grok, Ollama, Amazon Bedrock models, prompt engineering, multi-agent orchestration, RAG systems</li>
+                    <li><strong>LLM Integration &amp; AI:</strong> Claude (Anthropic API), OpenAI, Gemini, Grok, Ollama, Amazon Bedrock models, OpenAI Realtime API (voice), prompt engineering, multi-agent orchestration, RAG systems, Claude Skills</li>
                     <li><strong>Workflow Automation:</strong> n8n (self-hosted, production-grade), end-to-end pipeline design and deployment</li>
-                    <li><strong>Data &amp; Databases:</strong> ArangoDB (multi-model: document, graph, vector search), PostgreSQL, advanced SQL, ETL/data pipeline architecture</li>
+                    <li><strong>Data &amp; Databases:</strong> ArangoDB (multi-model: document, graph, vector search), PostgreSQL, Supabase (Postgres, RLS, pgvector), advanced SQL, ETL/data pipeline architecture</li>
                     <li><strong>Cloud &amp; Infrastructure:</strong> AWS (EC2, S3, Bedrock), Docker, Traefik, serverless architectures</li>
                     <li><strong>Integrations:</strong> HubSpot, Salesforce, Azure, Google APIs, any system with API connectivity</li>
-                    <li><strong>Frameworks &amp; Tools:</strong> n8n, CrewAI, LangChain, Python, TypeScript</li>
+                    <li><strong>Frameworks &amp; Tools:</strong> n8n, CrewAI, LangChain, FastAPI, Next.js, React, Grafana, Python, TypeScript</li>
                 </ul>
 
                 <h3 class="text-xl font-bold text-gray-800 pt-4">Background</h3>
@@ -187,6 +191,134 @@
             <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">A showcase of my latest projects, demonstrating my skills in AI development, RAG systems, data engineering, and machine learning applications.</p>
                 
             <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project NILS - AI Document-Validation Pipeline for Microloan Assessments -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
+                    <div class="h-48 bg-gray-200 relative" id="nils-carousel">
+                        <div class="carousel-container relative w-full h-full overflow-hidden">
+                            <img src="assets/img/nils/triage.png" alt="Caseworker review console showing the system's triage recommendation with cited reasons" class="carousel-image w-full h-full object-cover active">
+                            <img src="assets/img/nils/pipeline.png" alt="Document processing sub-workflow — classification, extraction, OCR routing and triage" class="carousel-image w-full h-full object-cover">
+                            <img src="assets/img/nils/pipeline-ingest.png" alt="Ingestion orchestration — OCR service health gate and per-applicant batching" class="carousel-image w-full h-full object-cover">
+                            <img src="assets/img/nils/documents.png" alt="Applicant document pack — ID, income, tenancy, banking and supplier-quote documents for a synthetic applicant" class="carousel-image w-full h-full object-cover">
+                        </div>
+                        <button class="carousel-btn prev-btn absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <button class="carousel-btn next-btn absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                        <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-1">
+                            <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300 active" data-slide="0"></button>
+                            <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300" data-slide="1"></button>
+                            <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300" data-slide="2"></button>
+                            <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300" data-slide="3"></button>
+                        </div>
+                        <div class="absolute top-0 right-0 bg-green-600 text-white px-3 py-1 m-2 rounded-full text-xs">2026 &ndash; Validation Phase</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">AI Document-Validation Pipeline for No-Interest Microloan Assessments</h3>
+                        <p class="text-gray-600 mb-4">An AI pipeline that reads and validates microloan application documents against codified eligibility rules, producing an auditable recommendation for a caseworker to decide &mdash; privacy by design. Built for an Australian no-interest loan (NILS) provider, it replaces the manual review of large applicant document packs with a structured, traceable result. The pipeline ingests both native-text PDFs and image scans via OCR, classifies each document type, extracts the relevant fields per type across identity, income, banking, tenancy and supplier-quote documents, then validates them against the program's eligibility criteria encoded as versioned decision tables &mdash; each rule citing its source in the lending handbook, so every outcome is auditable. Extracted values are grounded against the document's own text, and anything low-confidence is flagged for human confirmation rather than trusted blindly. The system returns a triage outcome with human-readable reasons and a needs-review list; it never auto-approves, so a caseworker always makes the final call. Privacy is architectural: real applicant data never leaves the local environment, development and testing run entirely on synthetic applicants, and only de-identified evaluation data is persisted for quality tracking against human-reviewer decisions.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Python</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Docker</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">vLLM</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Local LLM Inference</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">OCR &amp; Document AI</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Decision Tables</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Rules Engine</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">n8n</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">SQLite</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">CRM Integration</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm italic">Confidential client engagement &mdash; architecture walkthrough on request</span>
+                            <i class="fas fa-lock text-gray-400 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Sage - Voice AI Life Story Platform -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
+                    <div class="h-48 relative bg-gray-200 flex items-center justify-center" style="background-image: linear-gradient(135deg, #14b8a6 0%, #047857 100%);">
+                        <i class="fas fa-microphone-lines text-white text-6xl opacity-90"></i>
+                        <div class="absolute top-0 right-0 bg-green-600 text-white px-3 py-1 m-2 rounded-full text-xs">Aug 2026 &ndash; In Progress</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Sage &mdash; Voice AI Platform for Preserving Life Stories</h3>
+                        <p class="text-gray-600 mb-4">A multi-tenant platform that helps elderly people record their life stories by talking to a warm voice AI, then shares the stories they choose with their families &mdash; in their own voice and language. The browser opens a WebRTC connection directly to the OpenAI Realtime API using short-lived server-minted tokens, so the API key never reaches the client. The consent rule is enforced in Postgres row-level security rather than the UI: nothing reaches the family without the elder's explicit yes. Three surfaces in one Next.js app (elder companion PWA, family library, provider admin), 11 languages with cached translations, and pgvector semantic search across memories.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Next.js 15</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">React 19</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">TypeScript</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">OpenAI Realtime API</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">WebRTC</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Supabase</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Postgres RLS</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">pgvector</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Tailwind v4</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Playwright</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm italic">Private repository &mdash; walkthrough available on request</span>
+                            <i class="fas fa-lock text-gray-400 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project - Recruitment Reporting Warehouse & Executive Dashboards (Defence & Government recruitment client) -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
+                    <div class="h-48 relative bg-gray-200 flex items-center justify-center" style="background-image: linear-gradient(135deg, #6366f1 0%, #1e40af 100%);">
+                        <i class="fas fa-chart-line text-white text-6xl opacity-90"></i>
+                        <div class="absolute top-0 right-0 bg-green-600 text-white px-3 py-1 m-2 rounded-full text-xs">Aug 2026 &ndash; In Progress</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Recruitment Reporting Warehouse &amp; Executive Dashboards</h3>
+                        <p class="text-gray-600 mb-4">An end-to-end reporting pipeline for a Defence &amp; Government recruitment firm. n8n workflows ingest HubSpot contacts and deals into an ArangoDB reporting warehouse, a read-only FastAPI service exposes 16 metric endpoints over AQL, and two Grafana dashboards are provisioned as code from the repo: an 11-panel operational Master Report for the CEO and a 7-panel revenue Loss Analysis. Supporting Jupyter notebooks cover candidate pipeline growth, supply/demand gap, security clearance profile, loss analysis and the inbound marketing funnel. Runs on Docker Compose and deploys to AWS EC2 behind nginx/TLS, with every write to the production database gated behind explicit confirmation.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">ArangoDB</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">AQL</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">FastAPI</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Grafana</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">n8n</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">HubSpot API</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Python</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Docker Compose</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">AWS EC2</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Jupyter</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm italic">Private client work &mdash; walkthrough available on request</span>
+                            <i class="fas fa-lock text-gray-400 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project AwareIM XML Generator - Spec-to-BSV code generation skill -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
+                    <div class="h-48 relative bg-gray-200 flex items-center justify-center" style="background-image: linear-gradient(135deg, #a855f7 0%, #4338ca 100%);">
+                        <i class="fas fa-file-code text-white text-6xl opacity-90"></i>
+                        <div class="absolute top-0 right-0 bg-green-600 text-white px-3 py-1 m-2 rounded-full text-xs">Jun 2026 &middot; v1.5.0</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">AwareIM XML Generator &mdash; Spec-to-Application Code Generation Skill</h3>
+                        <p class="text-gray-600 mb-4">A Claude skill that turns a Markdown application spec into import-safe AwareIM Business Space Version (BSV) XML. Claude reads a bundled knowledge base of 230+ platform constraints verified against real business spaces, generates the XML, and runs a 19-check pre-flight validator over it &mdash; the file is only delivered on a clean PASS, so a business space that AwareIM would reject never ships silently. Covers business objects and attributes, peer relationships, validation/calculation/lifecycle rules, processes, REST and OAuth APIs, schedulers and template-based reports, with optional attribute-type validation against a live SQL schema.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Claude Skills</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Python</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">XML</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">AwareIM</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Code Generation</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Schema Validation</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Markdown DSL</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm italic">Private repository &mdash; walkthrough available on request</span>
+                            <i class="fas fa-lock text-gray-400 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
                 <!-- Project VoC - Voice of the Customer Analytics -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
                     <div class="h-48 bg-gray-200 relative" id="voc-carousel">
@@ -1058,6 +1190,7 @@
                 startAutoSlide();
             }
 
+            initCarousel('nils-carousel');
             initCarousel('rag-chatbot-carousel');
             initCarousel('rag-carousel');
             initCarousel('recruitment-carousel');
