@@ -305,8 +305,9 @@
                                 <ul>
                                     <li>RAG system adding document intelligence to a custom-built mortgage broker CRM &mdash; 150+ loan documents at 95%+ accuracy using Claude as the LLM layer, cutting manual lookup time by 80%</li>
                                     <li>Designed an ArangoDB multi-model schema combining document store, graph and vector search for classification, chunk-level tagging and relationship mapping between banks, processes and compliance requirements</li>
+                                    <li><strong>Sage</strong> &mdash; multi-tenant voice-AI platform where elderly people record life stories by talking to a conversational AI and choose, story by story, what their family can hear. The browser opens a WebRTC connection straight to the OpenAI Realtime API using short-lived server-minted tokens, so the API key never reaches the client; consent is enforced in Postgres row-level security rather than in the UI. Eleven languages with cached translations and semantic search across memories. Demo: <a href="https://youtu.be/xZAFn2mvJYw" style="color:#2563eb;">youtu.be/xZAFn2mvJYw</a></li>
                                     <li><strong>AwareIM XML Generator</strong> &mdash; a Claude skill turning a Markdown application spec into import-safe AwareIM BSV XML, gated by a 19-check pre-flight validator so a business space the platform would reject never ships</li>
-                                    <li>Stack: n8n, ArangoDB, Claude API, AWS (EC2, S3), Docker, Traefik, Python</li>
+                                    <li>Stack: n8n, ArangoDB, Claude API, AWS (EC2, S3), Docker, Traefik, Python, Next.js, TypeScript, Supabase (Postgres, RLS, pgvector), OpenAI Realtime API</li>
                                 </ul>
                             </div>
 
@@ -372,18 +373,6 @@
                 <!-- Featured Projects -->
                 <div class="section">
                     <div class="section-title">Independent Projects</div>
-
-                    <div class="project-item">
-                        <div class="project-title">Sage &mdash; Voice AI for Preserving Life Stories</div>
-                        <div class="date">2026</div>
-                        <div class="description">
-                            <p style="margin:2px 0;">Next.js 15, OpenAI Realtime API (WebRTC), Supabase, Postgres RLS, pgvector</p>
-                            <p style="margin:2px 0;">Multi-tenant platform where elderly people record life stories by talking to a voice AI, then share what they choose with family &mdash; in their own voice and language. The browser connects directly to the Realtime API with short-lived server-minted tokens, so the API key never reaches the client. Consent is enforced in row-level security rather than the UI: nothing reaches the family without an explicit yes. Eleven languages, cached translations, semantic search across memories.</p>
-                            <p style="margin:2px 0;">Demo: <a href="https://youtu.be/xZAFn2mvJYw" style="color:#2563eb;">youtu.be/xZAFn2mvJYw</a></p>
-                        </div>
-                    </div>
-
-                    
 
                     <div class="project-item">
                         <div class="project-title">Jobseeker Multi-Agent System</div>
