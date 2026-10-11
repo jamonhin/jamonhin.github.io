@@ -1,47 +1,52 @@
-# James Montoya - Resume
+# James Montoya — Resume
 
-This directory contains James Montoya's professional resume in HTML format, optimized for both web viewing and PDF generation.
+Single-source resume in HTML, built for screen reading and for printing to PDF.
 
 ## Files
 
-- `james-montoya-resume.html` - Professional resume in HTML format
-- `generate_pdf.py` - Python script for automated PDF generation
-- `README.md` - This file
+- `james-montoya-resume.html` — the resume. This is the only source; edit it here.
+- `generate_pdf.py` — optional script for automated PDF generation
+- `README.md` — this file
 
-## How to Use
+> There used to be a second file, `james-montoya-resume-pdf.html`. It drifted out of sync
+> with this one — different summary, different role list, different claimed years of
+> experience — and both were linked publicly from the portfolio. It has been removed.
+> Keep one source.
 
-### Option 1: View Online
-Simply open `james-montoya-resume.html` in any web browser to view the resume.
+## Generating a PDF
 
-### Option 2: Generate PDF (Recommended)
-1. Open `james-montoya-resume.html` in your web browser
-2. Click the "📄 Save as PDF" button in the top-right corner
-3. This will open the browser's print dialog
-4. Select "Save as PDF" as the destination
-5. Adjust settings if needed (recommended: margins to minimum)
-6. Save the file as "James-Montoya-Resume.pdf"
+### From the browser (recommended)
+1. Open `james-montoya-resume.html`
+2. Click **📄 Save as PDF** (top right) — this opens the print dialog
+3. Choose "Save as PDF" as the destination, set margins to minimum
+4. Save as `James-Montoya-Resume.pdf`
 
-### Option 3: Automated PDF Generation
-If you have Python installed:
+### From the command line
 ```bash
 pip install weasyprint
 python3 generate_pdf.py
 ```
 
-## Resume Highlights
+## Keeping it consistent with the portfolio
 
-- **Professional Experience**: 12+ years in data engineering and AI development
-- **Current Focus**: AI-powered workflow automation using N8N
-- **Key Skills**: LangChain, CrewAI, OpenAI, PostgreSQL, Python, JavaScript
-- **Education**: Master's in Software Engineering (AI) from Torrens University Australia
-- **Location**: Sydney, Australia (Permanent Resident)
+These must match `index.html`, or the site contradicts itself:
 
-## Contact Information
+| | Value |
+|---|---|
+| Headline | AI Engineer — Document AI, RAG Systems & Agentic Pipelines |
+| Experience framing | Twenty years' career, twelve of them in enterprise data engineering |
+| Email | james@ethicalaispecialists.com.au |
+| LinkedIn | linkedin.com/in/james-montoya |
+| Portfolio | jamonhin.github.io |
 
-- **Email**: jamonhin@gmail.com
-- **Location**: Sydney, Australia
-- **Portfolio**: [jamonhin.github.io](https://jamonhin.github.io)
+## Confidentiality
+
+The not-for-profit client behind the DocTriage work is **not named** here, matching how the
+portfolio and the project page describe them ("an Australian no-interest loan (NILS)
+provider" / "an Australian Not-for-Profit"). Do not add the client's name without written
+permission — this file is published publicly at
+`jamonhin.github.io/assets/resume/james-montoya-resume.html`.
 
 ---
 
-*Last updated: July 2025*
+*Last updated: October 2026*

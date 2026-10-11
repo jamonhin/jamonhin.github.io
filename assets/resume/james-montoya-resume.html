@@ -222,9 +222,9 @@
         <!-- Header -->
         <div class="header">
             <div class="name">JAMES MONTOYA</div>
-            <div class="title">Data &amp; AI Builder | LLM Pipelines, Workflow Automation &amp; Production AI Systems</div>
+            <div class="title">AI Engineer &mdash; Document AI, RAG Systems &amp; Agentic Pipelines</div>
             <div class="contact-info">
-                Sydney, Australia | jamonhin@gmail.com | LinkedIn: /in/jamesmontoya
+                Sydney, Australia | james@ethicalaispecialists.com.au | <a href="https://www.linkedin.com/in/james-montoya/" style="color:inherit;">linkedin.com/in/james-montoya</a> | <a href="https://jamonhin.github.io" style="color:inherit;">jamonhin.github.io</a>
             </div>
         </div>
 
@@ -232,23 +232,34 @@
         <div class="section">
             <div class="section-title">Professional Summary</div>
             <div class="summary">
-                I build things that ship. Sydney-based AI Engineer with 15+ years spanning enterprise data engineering, LLM-powered automation, and production AI systems. I use AI-native tooling every day — not as a party trick, but as a genuine productivity multiplier. My weekend projects become working demos; my curiosity drives me to experiment with every new framework, model, and tool the moment it drops. Core stack: n8n (self-hosted, production-grade), Python, SQL, ArangoDB, AWS, Docker. Track record of reducing manual processes by up to 95% and delivering end-to-end solutions from idea to live production in days, not months. Deep experience in regulated industries including financial services, defence recruitment, not-for-profit, banking and telecommunication.
-            </div>
+                I build production AI systems that ship. Sydney-based AI engineer with twenty years across enterprise data engineering and, for the last three, LLM-powered automation and production AI. Twelve of those years were spent building ETL pipelines, data models and reporting platforms in banking and telecommunications &mdash; which is why I treat an AI system as a data system: ingestion, transformation, storage, retrieval, presentation. Core stack: Python, n8n (self-hosted), ArangoDB, PostgreSQL, AWS, Docker, and local LLM inference where data cannot leave the building. Track record of cutting manual processes by up to 95% and taking systems from idea to production in days rather than months, in regulated settings: financial services, defence recruitment, not-for-profit, banking and telecommunications.</div>
         </div>
 
         <!-- Show Don't Tell Section -->
         <div class="section">
             <div class="section-title">Show, Don't Tell — Featured Work</div>
             <div class="project-item">
+                <div class="project-title">DocTriage &mdash; AI Document-Validation Pipeline <span style="font-weight:normal;color:#666;">(no-interest microloan assessments)</span></div>
+                <div class="description">
+                    <ul>
+                        <li>Reads and validates an applicant's full document pack &mdash; identity, income, banking, tenancy, supplier quotes &mdash; against eligibility rules encoded as versioned, auditable decision tables, each citing its source in the lending handbook</li>
+                        <li>Two extraction paths behind one contract: a digit-perfect native-PDF extractor (no GPU) and a GPU vision-OCR service for scans and images</li>
+                        <li>Grounded extraction &mdash; every value is verified against the document's own text; anything low-confidence escalates to a human instead of flowing silently into a decision</li>
+                        <li>Privacy by design: inference runs locally, real applicant data never leaves the environment, development runs entirely on synthetic applicants. The system never auto-approves</li>
+                        <li>Explainer: <a href="https://youtu.be/o7USxW7kreY" style="color:#2563eb;">youtu.be/o7USxW7kreY</a> &nbsp;&middot;&nbsp; Live demo: <a href="https://youtu.be/Z-52Q6Odrcw" style="color:#2563eb;">youtu.be/Z-52Q6Odrcw</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-item">
                 <div class="project-title">Voice of the Customer Analytics Platform <span style="font-weight:normal;color:#666;">(built as a weekend POC)</span></div>
                 <div class="description">
                     <ul>
-                        <li>End-to-end pipeline: real insurance call transcripts → LLM extraction (Gemini 2.5 Flash) → ArangoDB storage → live webhook dashboard</li>
+                        <li>End-to-end pipeline: real insurance call transcripts &rarr; LLM extraction (Gemini 2.5 Flash) &rarr; ArangoDB storage &rarr; live webhook dashboard</li>
                         <li>16-field structured extraction: calibrated sentiment scoring, sentiment journey tracking, churn risk, topic classification, agent performance</li>
-                        <li>Benchmarked GPT-4.1 Mini vs Gemini 2.5 Flash on identical transcripts — selected Flash for superior nuanced sentiment detection</li>
-                        <li>Video walkthrough: <a href="https://youtu.be/aUAvT4RlgSw" style="color:#2563eb;">https://youtu.be/aUAvT4RlgSw</a></li>
-                        <li>Live dashboard: <a href="https://automation.ethicalaispecialists.com.au/webhook/voc-dashboard" style="color:#2563eb;">https://automation.ethicalaispecialists.com.au/webhook/voc-dashboard</a></li>
-                        <li>Full project portfolio: <a href="https://jamonhin.github.io" style="color:#2563eb;">https://jamonhin.github.io</a></li>
+                        <li>Benchmarked GPT-4.1 Mini vs Gemini 2.5 Flash on identical transcripts &mdash; selected Flash for superior nuanced sentiment detection</li>
+                        <li>Walkthrough: <a href="https://youtu.be/aUAvT4RlgSw" style="color:#2563eb;">youtu.be/aUAvT4RlgSw</a> &nbsp;&middot;&nbsp; Live dashboard: <a href="https://automation.ethicalaispecialists.com.au/webhook/voc-dashboard" style="color:#2563eb;">automation.ethicalaispecialists.com.au</a></li>
+                        <li>Full project portfolio: <a href="https://jamonhin.github.io" style="color:#2563eb;">jamonhin.github.io</a></li>
                     </ul>
                 </div>
             </div>
@@ -297,7 +308,7 @@
                     <div class="experience-item clearfix">
                         <div class="job-title">AI Consultant - AI Training &amp; Workflow Automation</div>
                         <div class="date">Nov 2024 — Present</div>
-                        <div class="company">Consultant For Mary Mackillop Today</div>
+                        <div class="company">Consultant for an Australian Not-for-Profit</div>
                         <div class="location">Sydney, Australia</div>
                         <div class="description">
                             <ul>
@@ -421,48 +432,43 @@
                     <div class="section-title">Technical Skills</div>
 
                     <div class="skill-category">
-                        <div class="skill-category-title">AI &amp; LLM Integration</div>
-                        <div class="skill-list">Claude (Anthropic API), OpenAI, Gemini, Grok, Ollama, Amazon Bedrock, Prompt Engineering, Multi-Agent Orchestration, RAG Systems</div>
+                        <div class="skill-category-title">AI &amp; LLM Engineering</div>
+                        <div class="skill-list">Claude (Anthropic API), OpenAI, Gemini, Amazon Bedrock, Ollama, local inference (vLLM), prompt engineering, multi-agent orchestration, RAG systems, document AI &amp; OCR, vector search</div>
                     </div>
 
                     <div class="skill-category">
                         <div class="skill-category-title">Frameworks &amp; Orchestration</div>
-                        <div class="skill-list">n8n (self-hosted, production-grade), CrewAI, LangChain, LlamaIndex</div>
+                        <div class="skill-list">n8n (self-hosted, production-grade), LangChain, LlamaIndex, CrewAI, FastAPI, decision-table rules engines</div>
                     </div>
 
                     <div class="skill-category">
                         <div class="skill-category-title">Programming</div>
-                        <div class="skill-list">Python, TypeScript, JavaScript, SQL, Node.js, React.js, Java, VBA</div>
+                        <div class="skill-list">Python, TypeScript, JavaScript, SQL, AQL, Node.js, React, Next.js, Java</div>
                     </div>
 
                     <div class="skill-category">
                         <div class="skill-category-title">Databases</div>
-                        <div class="skill-list">ArangoDB (document, graph, vector search), PostgreSQL, pgvector, Supabase, SQL Server, Oracle, MySQL</div>
+                        <div class="skill-list">ArangoDB (document, graph, vector search), PostgreSQL, pgvector, Supabase, Neo4j, SQL Server, Oracle, MySQL</div>
                     </div>
 
                     <div class="skill-category">
                         <div class="skill-category-title">Cloud &amp; Infrastructure</div>
-                        <div class="skill-list">AWS (EC2, S3, Bedrock), Docker, Traefik, Nginx, Let's Encrypt, Azure (Outlook, Teams, SharePoint, OneDrive APIs), Google Cloud (API connections), Serverless Architectures</div>
-                    </div>
-
-                    <div class="skill-category">
-                        <div class="skill-category-title">Integration &amp; APIs</div>
-                        <div class="skill-list">HubSpot, Salesforce, Azure, Google APIs, any system with API connectivity</div>
+                        <div class="skill-list">AWS (EC2, S3, Lambda, Bedrock, OpenSearch, API Gateway), Docker, Traefik, Nginx, Let's Encrypt, Azure (Teams, SharePoint, OneDrive APIs), Google Cloud, serverless architectures</div>
                     </div>
 
                     <div class="skill-category">
                         <div class="skill-category-title">Data Engineering</div>
-                        <div class="skill-list">ETL Pipelines (SSIS, Airflow, n8n) | Data Modelling | Datamart | MLOps | Multi-source integration</div>
+                        <div class="skill-list">ETL pipelines (SSIS, Airflow, n8n), data modelling, multi-source integration, MLOps, Datamart, reporting warehouses, Grafana</div>
                     </div>
 
                     <div class="skill-category">
-                        <div class="skill-category-title">Frontend &amp; Dashboards</div>
-                        <div class="skill-list">React.js | Next.js | Chart.js | Webhook-served dashboards | Power BI | Tableau | PhoneGap (mobile apps) | HTML | JavaScript</div>
+                        <div class="skill-category-title">Integration &amp; APIs</div>
+                        <div class="skill-list">HubSpot, Salesforce, Azure, Google APIs, webhooks, any system with API connectivity</div>
                     </div>
 
                     <div class="skill-category">
-                        <div class="skill-category-title">Analytics &amp; Visualisation</div>
-                        <div class="skill-list">Tableau, Power BI, QlikView, Machine Learning, Scikit-Learn</div>
+                        <div class="skill-category-title">Also experienced with</div>
+                        <div class="skill-list">Power BI, Tableau, QlikView, VBA, Scikit-Learn, Chart.js &mdash; from twelve years in enterprise BI and data engineering</div>
                     </div>
                 </div>
 
