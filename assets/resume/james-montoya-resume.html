@@ -271,70 +271,64 @@
                 <div class="section">
                     <div class="section-title">Professional Experience</div>
 
-                    <div class="experience-item clearfix">
-                        <div class="job-title">AI Engineer — RAG System &amp; Document Intelligence</div>
-                        <div class="date">Nov 2025 — Present</div>
-                        <div class="company">Consultant for eThink Solutions</div>
-                        <div class="location">Brisbane (Remote), Australia</div>
+                                            <div class="experience-item clearfix">
+                        <div class="job-title">AI Consultant &mdash; Independent Practice</div>
+                        <div class="date">Nov 2023 &mdash; Present</div>
+                        <div class="company">Ethical AI Specialists</div>
+                        <div style="color:#666;font-size:11px;">Sydney, Australia</div>
                         <div class="description">
-                            <ul>
-                                <li>Building a RAG (Retrieval-Augmented Generation) system enhancing eThink's custom-built mortgage broker CRM with document intelligence capability</li>
-                                <li>Processing 150+ loan documents with 95%+ accuracy using Claude (Anthropic API) as the LLM layer</li>
-                                <li>Designed ArangoDB multi-model schema combining document store, graph database, and vector search for document classification, chunk-level tagging, and relationship mapping between banks, processes, and compliance requirements</li>
-                                <li>Reduced manual document lookup time by 80% through natural language conversational interface</li>
-                                <li>Built document classification admin interface with graph visualisation of document relationships</li>
-                                <li>Tech stack: n8n, ArangoDB, Claude API, AWS (EC2, S3), Docker, Traefik</li>
-                            </ul>
+                            <p style="margin:4px 0 6px 0;">Independent AI consultancy delivering production systems for three concurrent clients across not-for-profit, defence recruitment and financial services.</p>
+
+                            <div style="border-left:2px solid #dbeafe;padding-left:10px;margin-bottom:8px;">
+                                <div style="font-weight:600;color:#1f2937;">Australian Not-for-Profit <span style="font-weight:normal;color:#666;">&middot; Nov 2024 &mdash; Present &middot; Sydney</span></div>
+                                <ul>
+                                    <li><strong>DocTriage</strong> &mdash; AI document-validation pipeline for no-interest microloan assessments. Classification and field extraction across eight document categories, eligibility rules encoded as versioned auditable decision tables, grounded extraction with low-confidence escalation to a human</li>
+                                    <li>Privacy-by-design architecture: local LLM inference, synthetic applicants in development, no real applicant data leaving the environment. The system never auto-approves &mdash; a caseworker makes every final decision</li>
+                                    <li>Created and delivered an AI training video course for not-for-profit teams, covering safe adoption, data governance and practical tooling</li>
+                                    <li>Automated the end-to-end lead data pipeline for Meta digital acquisition campaigns</li>
+                                    <li>Stack: Python, Docker, vLLM, vision OCR, decision-table rules engine, n8n, SQLite, CRM integration</li>
+                                </ul>
+                            </div>
+
+                            <div style="border-left:2px solid #dbeafe;padding-left:10px;margin-bottom:8px;">
+                                <div style="font-weight:600;color:#1f2937;">Defence &amp; Government Recruitment Firm <span style="font-weight:normal;color:#666;">&middot; Jun 2025 &mdash; Present &middot; Canberra (Remote)</span></div>
+                                <ul>
+                                    <li>Built multi-stage AI recruitment pipeline: CV ingestion, structured extraction (skills, security clearances, capability domains), graph-based storage in ArangoDB</li>
+                                    <li>Designed multi-agent architecture (Router &rarr; Query Builder &rarr; Response Formatter &rarr; Validator) orchestrated through n8n, surfaced to recruiters as a conversational agent inside Microsoft Teams</li>
+                                    <li>Extended the platform into executive reporting: n8n ingestion of HubSpot contacts and deals into an ArangoDB reporting warehouse, a read-only FastAPI service exposing 16 metric endpoints, and two Grafana dashboards provisioned as code and deployed on AWS EC2</li>
+                                    <li>HubSpot integration processing ~1,759 contacts with AGSVA clearance and skills data; automated resume processing cutting manual data entry by 95%; dual-layer skill extraction preventing domain mismatches with 90%+ accuracy</li>
+                                </ul>
+                            </div>
+
+                            <div style="border-left:2px solid #dbeafe;padding-left:10px;margin-bottom:4px;">
+                                <div style="font-weight:600;color:#1f2937;">eThink Solutions <span style="font-weight:normal;color:#666;">&middot; Nov 2025 &mdash; Present &middot; Brisbane (Remote)</span></div>
+                                <ul>
+                                    <li>RAG system adding document intelligence to a custom-built mortgage broker CRM &mdash; 150+ loan documents at 95%+ accuracy using Claude as the LLM layer, cutting manual lookup time by 80%</li>
+                                    <li>Designed an ArangoDB multi-model schema combining document store, graph and vector search for classification, chunk-level tagging and relationship mapping between banks, processes and compliance requirements</li>
+                                    <li><strong>AwareIM XML Generator</strong> &mdash; a Claude skill turning a Markdown application spec into import-safe AwareIM BSV XML, gated by a 19-check pre-flight validator so a business space the platform would reject never ships</li>
+                                    <li>Stack: n8n, ArangoDB, Claude API, AWS (EC2, S3), Docker, Traefik, Python</li>
+                                </ul>
+                            </div>
+
+                            <div style="margin-top:6px;">
+                                <div style="font-weight:600;color:#1f2937;">Earlier independent work <span style="font-weight:normal;color:#666;">&middot; Nov 2023 &mdash; Nov 2024</span></div>
+                                <ul>
+                                    <li>Production-ready RAG chatbot with PostgreSQL/pgvector, Next.js 15, React and Redis; Jobseeker multi-agent system using LangChain, CrewAI and OpenAI</li>
+                                    <li>Docker-based ML environments, automated ETL with Apache Airflow, and predictive models for nonprofit donor behaviour using clustering</li>
+                                    <li>Completed Master of Software Engineering (AI Specialisation), Torrens University</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
                     <div class="experience-item clearfix">
-                        <div class="job-title">AI Engineer - Workflow Automation &amp; AI Integration</div>
-                        <div class="date">Jun 2025 - Present</div>
-                        <div class="company">Consultant for Defence &amp; Government Recruitment Firm</div>
-                        <div class="location">Canberra (Remote), Australia</div>
+                        <div class="job-title">Relocation to Australia &amp; Postgraduate Study</div>
+                        <div class="date">2017 &mdash; 2023</div>
+                        <div class="company">Sydney, Australia</div>
                         <div class="description">
                             <ul>
-                                <li>Built multi-stage AI recruitment pipeline: CV ingestion, structured data extraction (skills, security clearances, capability domains), and graph-based storage in ArangoDB</li>
-                                <li>Designed multi-agent architecture (Router → Query Builder → Response Formatter → Validator) orchestrated through n8n for intelligent candidate matching</li>
-                                <li>Integrated conversational AI agent into Microsoft Teams enabling recruiters to find candidates through natural language queries</li>
-                                <li>Developed HubSpot integration processing ~1,759 contacts with AGSVA clearance and skills data</li>
-                                <li>Built automated resume processing pipeline reducing manual data entry by 95%</li>
-                                <li>Engineered dual-layer skill extraction system preventing domain mismatches with 90%+ accuracy</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="experience-item clearfix">
-                        <div class="job-title">AI Consultant - AI Training &amp; Workflow Automation</div>
-                        <div class="date">Nov 2024 — Present</div>
-                        <div class="company">Consultant for an Australian Not-for-Profit</div>
-                        <div class="location">Sydney, Australia</div>
-                        <div class="description">
-                            <ul>
-                                <li>Created and developed AI Training Video Course for Not-for-Profit Organisation</li>
-                                <li>Developed AI-powered automation systems using N8N</li>
-                                <li>AI advice and consulting</li>
-                                <li>Automation for managing the end-to-end lead data pipeline for Meta digital acquisition campaigns</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="experience-item clearfix">
-                        <div class="job-title">AI &amp; Data Engineer — Independent Projects</div>
-                        <div class="date">Nov 2023 - Nov 2024</div>
-                        <div class="company">Ethical AI Specialists (Independent Practice)</div>
-                        <div class="location">Sydney, Australia</div>
-                        <div class="description">
-                            <ul>
-                                <li>Built production-ready RAG chatbot with PostgreSQL/pgvector, Next.js 15, React, and Redis</li>
-                                <li>Developed Jobseeker multi-agent system using LangChain, CrewAI, and OpenAI</li>
-                                <li>Developed Docker-based ML environments for scalable model development and deployment</li>
-                                <li>Built predictive models for nonprofit donor behaviour analysis using clustering algorithms</li>
-                                <li>Implemented automated ETL processes using Apache Airflow for ML data pipelines</li>
-                                <li>Designed and prototyped AI-powered automation workflows using n8n and LLM APIs</li>
-                                <li>Completed Master of Software Engineering (AI Specialisation) at Torrens University</li>
-                                <li>Stack: Python, PostgreSQL, pgvector, Supabase, Next.js, React, TypeScript, Redis, Docker, Apache Airflow</li>
+                                <li>Relocated from Colombia to Australia and became a permanent resident</li>
+                                <li>Completed a Master of Software Engineering (AI Specialisation) at Torrens University Australia, pivoting from enterprise data engineering into applied AI</li>
                             </ul>
                         </div>
                     </div>
@@ -377,16 +371,9 @@
 
                 <!-- Featured Projects -->
                 <div class="section">
-                    <div class="section-title">Featured Projects</div>
+                    <div class="section-title">Independent Projects</div>
 
-                    <div class="project-item">
-                        <div class="project-title">AI-Powered Mortgage Broker Document Assistant</div>
-                        <div class="date">2025</div>
-                        <div class="tech-stack">n8n, ArangoDB, Claude API, AWS EC2, Docker, RAG</div>
-                        <div class="description">
-                            RAG system for eThink Solutions' mortgage broker CRM enabling staff to query 150+ loan documents through natural language. Multi-model database architecture combining document store, graph, and vector search with 95%+ accuracy and 80% reduction in manual lookup time.
-                        </div>
-                    </div>
+                    
 
                     <div class="project-item">
                         <div class="project-title">Jobseeker Multi-Agent System</div>
@@ -397,14 +384,7 @@
                         </div>
                     </div>
 
-                    <div class="project-item">
-                        <div class="project-title">Automated Resume Processing &amp; CRM Integration</div>
-                        <div class="date">Jul 2025</div>
-                        <div class="tech-stack">n8n, ArangoDB, Claude API, HubSpot, Microsoft Teams, Python</div>
-                        <div class="description">
-                            Multi-stage AI recruitment pipeline for Defence &amp; Government recruitment firm. CV ingestion, structured data extraction, ArangoDB graph storage, and Microsoft Teams chatbot with multi-agent architecture. Reduced manual data entry by 95%.
-                        </div>
-                    </div>
+                    
 
                     <div class="project-item">
                         <div class="project-title">Cleaning Company Management System</div>
@@ -512,13 +492,15 @@
                     <div class="section-title">Key Achievements</div>
                     <div class="description">
                         <ul>
-                            <li>Built Voice of the Customer POC in days — end-to-end pipeline processing real insurance call transcripts with live dashboard</li>
-                            <li>Reduced manual document lookup time by 80% through RAG system implementation</li>
-                            <li>Reduced manual data entry by 95% through AI-powered automation pipelines</li>
+                            <li>Designed an auditable document-validation pipeline whose eligibility rules live in versioned decision tables, each citing its source policy &mdash; so every automated outcome can be traced back to the rule that produced it</li>
+                            <li>Shipped privacy-by-design AI: local inference, synthetic data in development, and no real applicant information leaving the client environment</li>
+                            <li>Built a reporting warehouse and two provisioned-as-code Grafana dashboards over a HubSpot &rarr; ArangoDB pipeline, deployed on AWS EC2</li>
+                            <li>Reduced manual document lookup time by 80% and manual data entry by 95% through AI-powered automation</li>
                             <li>Achieved 95%+ accuracy in intelligent document processing across 150+ documents</li>
+                            <li>Built the Voice of the Customer POC in days &mdash; end-to-end pipeline on real insurance transcripts with a live dashboard</li>
                             <li>Designed multi-agent AI architectures for production enterprise environments</li>
-                            <li>Successfully migrated complex financial database systems at enterprise scale</li>
-                            <li>Delivered AI training programs for not-for-profit organisations</li>
+                            <li>Successfully migrated complex financial database systems at enterprise scale in regulated banking</li>
+                            <li>Delivered AI training programmes for not-for-profit organisations</li>
                         </ul>
                     </div>
                 </div>
