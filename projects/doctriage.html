@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocTriage — AI Document-Validation Pipeline - James Montoya</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="../index.html" class="flex items-center py-4">
+                            <span class="font-semibold text-gray-500 text-lg">James Montoya</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <a href="../index.html#about" class="py-4 px-2 text-gray-500 hover:text-blue-500">About</a>
+                    <a href="../index.html#skills" class="py-4 px-2 text-gray-500 hover:text-blue-500">Skills</a>
+                    <a href="../index.html#mystory" class="py-4 px-2 text-gray-500 hover:text-blue-500">My Story</a>
+                    <a href="../index.html#projects" class="py-4 px-2 text-gray-500 hover:text-blue-500">Projects</a>
+                    <a href="../index.html#timeline" class="py-4 px-2 text-gray-500 hover:text-blue-500">Journey</a>
+                    <a href="../index.html#contact" class="py-4 px-2 text-gray-500 hover:text-blue-500">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <div class="bg-white py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 md:pr-10">
+                    <div class="yt-facade relative w-full rounded-xl shadow-lg overflow-hidden bg-gray-900 cursor-pointer"
+                         data-yt="o7USxW7kreY"
+                         data-title="DocTriage: From Document Bottleneck to Ready-to-Review in Seconds"
+                         style="padding-bottom:56.25%;">
+                        <img src="https://i.ytimg.com/vi/o7USxW7kreY/maxresdefault.jpg"
+                             alt="DocTriage animated explainer — how documents move from intake to a triage recommendation"
+                             class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                        <span class="absolute inset-0 flex items-center justify-center" role="button" tabindex="0" aria-label="Play the DocTriage explainer video">
+                            <span class="bg-red-600 hover:bg-red-700 text-white rounded-full w-20 h-20 flex items-center justify-center shadow-xl transition duration-300">
+                                <i class="fas fa-play text-3xl ml-1"></i>
+                            </span>
+                        </span>
+                        <span class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 text-white text-xs px-4 py-2">
+                            How it works &mdash; animated explainer
+                        </span>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mt-8 md:mt-0">
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">DocTriage &mdash; AI Document-Validation Pipeline for No-Interest Microloan Assessments</h1>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Docker</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">vLLM</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Local LLM Inference</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">OCR &amp; Document AI</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Decision Tables</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">n8n</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">SQLite</span>
+                    </div>
+                    <p class="text-gray-600 mb-6">An AI pipeline that reads and validates microloan application documents against codified eligibility rules, producing an auditable recommendation for a caseworker to decide &mdash; privacy by design. Built for an Australian no-interest loan (NILS) provider.</p>
+
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <a href="https://youtu.be/o7USxW7kreY" target="_blank" rel="noopener" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-5 rounded-full shadow-md transition duration-300 flex items-center">
+                            <i class="fas fa-play-circle mr-2"></i> How It Works
+                        </a>
+                        <a href="#live-demo" class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-5 rounded-full shadow-md transition duration-300 flex items-center">
+                            <i class="fas fa-desktop mr-2"></i> Live Demo
+                        </a>
+                    </div>
+
+                    <div class="bg-indigo-50 border-l-4 border-indigo-500 p-4">
+                        <p class="text-indigo-700 font-semibold">Validation Phase &mdash; 2026</p>
+                        <p class="text-indigo-600 text-sm">Running against synthetic applicants while decision tables are tuned against human-reviewer outcomes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="bg-gray-50 py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-3xl font-bold text-blue-600 mb-2">8</div>
+                    <div class="text-gray-600 text-sm">Document Categories Validated</div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-3xl font-bold text-green-600 mb-2">4</div>
+                    <div class="text-gray-600 text-sm">Triage Outcomes</div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-3xl font-bold text-purple-600 mb-2">100%</div>
+                    <div class="text-gray-600 text-sm">Local Inference &mdash; No Data Leaves</div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-3xl font-bold mb-2" style="color:#ea580c;">Human</div>
+                    <div class="text-gray-600 text-sm">Makes Every Final Decision</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Demo -->
+    <div class="bg-white py-16" id="live-demo">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-gray-800 mb-3 text-center">See It Running</h2>
+            <p class="text-gray-600 mb-8 text-center">The n8n workflows processing a complete loan application end to end &mdash; document intake, classification, extraction, rule evaluation, and the triage recommendation landing in the review console.</p>
+            <div class="yt-facade relative w-full rounded-xl shadow-lg overflow-hidden bg-gray-900 cursor-pointer"
+                 data-yt="Z-52Q6Odrcw"
+                 data-title="DocTriage — Live Demo: n8n Workflows Processing a Loan Application"
+                 style="padding-bottom:56.25%;">
+                <img src="https://i.ytimg.com/vi/Z-52Q6Odrcw/maxresdefault.jpg"
+                     alt="Live demo — n8n workflows processing a loan application"
+                     class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                <span class="absolute inset-0 flex items-center justify-center" role="button" tabindex="0" aria-label="Play the DocTriage live demo video">
+                    <span class="bg-red-600 hover:bg-red-700 text-white rounded-full w-20 h-20 flex items-center justify-center shadow-xl transition duration-300">
+                        <i class="fas fa-play text-3xl ml-1"></i>
+                    </span>
+                </span>
+                <span class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 text-white text-xs px-4 py-2">
+                    Live demo &mdash; n8n workflows processing a loan application
+                </span>
+            </div>
+            <p class="text-gray-500 text-sm mt-4 text-center"><i class="fas fa-user-shield mr-1"></i> Every applicant shown is synthetic. Client identifiers and eligibility thresholds are redacted.</p>
+        </div>
+    </div>
+
+    <!-- Inside the System -->
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-gray-800 mb-3 text-center">Inside the System</h2>
+            <p class="text-gray-600 mb-8 text-center max-w-3xl mx-auto">The review console, the orchestration workflows, and the document pack a single applicant submits.</p>
+            <div class="w-full h-64 md:h-96 bg-gray-200 rounded-xl shadow-lg overflow-hidden relative" id="doctriage-carousel">
+                <div class="carousel-container relative w-full h-full overflow-hidden">
+                    <img src="../assets/img/nils/triage.png" alt="Caseworker review console showing the system's triage recommendation with cited reasons" class="carousel-image w-full h-full object-cover active">
+                    <img src="../assets/img/nils/pipeline.png" alt="Document processing sub-workflow — classification, extraction, OCR routing and triage" class="carousel-image w-full h-full object-cover">
+                    <img src="../assets/img/nils/pipeline-ingest.png" alt="Ingestion orchestration — OCR service health gate and per-applicant batching" class="carousel-image w-full h-full object-cover">
+                    <img src="../assets/img/nils/documents.png" alt="Applicant document pack — ID, income, tenancy, banking and supplier-quote documents for a synthetic applicant" class="carousel-image w-full h-full object-cover">
+                </div>
+                <button class="carousel-btn prev-btn absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button class="carousel-btn next-btn absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+                <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-1">
+                    <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300 active" data-slide="0"></button>
+                    <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300" data-slide="1"></button>
+                    <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300" data-slide="2"></button>
+                    <button class="carousel-dot w-2 h-2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full transition duration-300" data-slide="3"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Details -->
+    <div class="bg-white py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="md:col-span-2">
+
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Overview</h2>
+                    <div class="prose max-w-none text-gray-600">
+                        <p class="mb-4">DocTriage is a document-processing and decision-support system that automates the intake and eligibility checking of loan applications for a community no-interest lending program &mdash; NILS, the Australian not-for-profit microfinance model. A caseworker opens a structured, cited result instead of a folder of raw PDFs.</p>
+
+                        <h3 class="text-xl font-bold text-gray-800 mt-8 mb-4">The Problem</h3>
+                        <p class="mb-4">Caseworkers manually review a large document pack per applicant &mdash; identity documents, income statements, bank statements, rent ledgers, utility bills, credit reports, and a supplier quote for the item being financed &mdash; against a detailed eligibility handbook. The work is slow, repetitive, and error-prone, and it is the bottleneck between an application arriving and a decision being made. Every hour spent re-reading a PDF is an hour not spent with the applicant.</p>
+
+                        <h3 class="text-xl font-bold text-gray-800 mt-8 mb-4">Architecture &amp; Technical Design</h3>
+                        <p class="mb-4">The pipeline is a set of containerised services chained by an n8n orchestrator:</p>
+                        <ol class="list-decimal pl-6 mb-6 space-y-3">
+                            <li><strong>Native-text PDF extractor:</strong> digit-perfect text extraction from PDFs that carry a real text layer. No GPU required, and no OCR error introduced where none is needed.</li>
+                            <li><strong>Vision-OCR service:</strong> a GPU-backed vision model for images, screenshots, and scanned PDFs with no text layer. The orchestrator routes per file type and checks the service is warm before starting a batch.</li>
+                            <li><strong>Document classification:</strong> each file in the pack is identified by type, then handed to the field extractor matched to that type.</li>
+                            <li><strong>Rules &amp; triage API:</strong> extracted fields are evaluated against the program's eligibility criteria, encoded as versioned decision tables. Each rule cites its source in the lending handbook, so any outcome can be traced back to the policy that produced it.</li>
+                            <li><strong>Confidence grounding:</strong> every extracted value is verified against the document's own text. Anything the system cannot ground is flagged for human confirmation rather than trusted silently.</li>
+                            <li><strong>Review console:</strong> the caseworker sees the triage outcome, the per-category findings, the extracted values beside their source documents, and an explicit list of what still needs a human.</li>
+                            <li><strong>Evaluation store:</strong> system decisions are compared against the human reviewer's decisions, so accuracy is measured rather than assumed.</li>
+                        </ol>
+
+                        <h3 class="text-xl font-bold text-gray-800 mt-8 mb-4">Key Design Decisions</h3>
+                        <ul class="list-disc pl-6 mb-6 space-y-3">
+                            <li><strong>It never auto-approves.</strong> The system produces a recommendation and the evidence behind it. The lending decision belongs to a person, and the interface says so on every case: <em>&ldquo;Automated recommendation only &mdash; the final decision is yours.&rdquo;</em></li>
+                            <li><strong>Rules live in decision tables, not in prompts.</strong> Eligibility criteria are versioned data, not model behaviour. They can be reviewed, diffed, and audited by the people who own the policy &mdash; and changing a rule does not mean re-engineering a prompt.</li>
+                            <li><strong>Grounding over trust.</strong> An extracted value that cannot be matched back to text in the source document is surfaced as low-confidence rather than passed downstream. The failure mode is &ldquo;ask a human&rdquo;, not &ldquo;guess confidently&rdquo;.</li>
+                            <li><strong>Privacy is architectural, not procedural.</strong> Inference runs locally; real applicant data never leaves the environment. Development and testing run entirely on synthetic applicants, and only de-identified evaluation data is persisted. Structured identifiers are masked by default in the console and revealed only on an explicit click.</li>
+                            <li><strong>Serial by design.</strong> The parser holds a single GPU model slot, so applicants and documents are processed one at a time. Running them in parallel only queues work and risks timeouts &mdash; throughput came from removing redundant OCR, not from fan-out.</li>
+                            <li><strong>Failures degrade, they don't abort.</strong> A document that cannot be read produces an explicit &ldquo;unknown&rdquo; entry and routes to human review. One bad file never takes down the whole applicant's run.</li>
+                        </ul>
+
+                        <h3 class="text-xl font-bold text-gray-800 mt-8 mb-4">What the Caseworker Gets</h3>
+                        <p class="mb-4">A triage outcome &mdash; proceed, request documents, decline, or waitlist &mdash; with human-readable reasons, a per-category breakdown of what passed and what needs checking, and a &ldquo;needs human review&rdquo; list. Each finding links to the document and the extracted value behind it, so verifying the system is faster than redoing its work.</p>
+
+                        <h3 class="text-xl font-bold text-gray-800 mt-8 mb-4">Status</h3>
+                        <p class="mb-4">Validation phase. The pipeline runs end to end on synthetic applicants while the decision tables are tuned against real human-reviewer outcomes held in the evaluation store.</p>
+                    </div>
+                </div>
+
+                <div class="md:col-span-1">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Project Information</h2>
+
+                    <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Project Type</h3>
+                        <p class="text-gray-600 mb-2">Client Engagement</p>
+                        <p class="text-sm text-gray-500">An Australian no-interest loan (NILS) provider</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Timeline</h3>
+                        <p class="text-gray-600">2026 &mdash; Validation Phase</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Role</h3>
+                        <p class="text-gray-600">AI Engineer &amp; Pipeline Architect</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Videos</h3>
+                        <div class="space-y-3">
+                            <a href="https://youtu.be/o7USxW7kreY" target="_blank" rel="noopener" class="flex items-center text-blue-600 hover:text-blue-800 text-sm">
+                                <i class="fas fa-play-circle mr-2"></i> How It Works &mdash; Explainer
+                            </a>
+                            <a href="https://youtu.be/Z-52Q6Odrcw" target="_blank" rel="noopener" class="flex items-center text-green-600 hover:text-green-800 text-sm">
+                                <i class="fas fa-desktop mr-2"></i> Live Demo &mdash; n8n Workflows
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+                        <h3 class="text-sm font-bold text-gray-800 mb-2"><i class="fas fa-lock mr-1"></i> Confidentiality</h3>
+                        <p class="text-sm text-gray-600">The client is not named, and eligibility thresholds, infrastructure details and internal identifiers are redacted from every screenshot and video on this page. Applicants shown are synthetic.</p>
+                    </div>
+
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Technologies Used</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Python</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Docker</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">vLLM</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Local LLM Inference</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Vision OCR</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Document AI</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Decision Tables</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Rules Engine</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">n8n</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">SQLite</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">FastAPI</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">CRM Integration</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 bg-blue-50 p-6 rounded-lg">
+                        <h3 class="text-lg font-bold text-gray-800 mb-3">Skills Demonstrated</h3>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i>Document AI &amp; OCR Pipelines</li>
+                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i>Self-Hosted LLM Inference</li>
+                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i>Auditable Rules Engineering</li>
+                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i>Privacy-by-Design Architecture</li>
+                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i>Human-in-the-Loop System Design</li>
+                            <li><i class="fas fa-check-circle text-blue-600 mr-2"></i>Workflow Orchestration (n8n)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technical Highlights -->
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Technical Highlights</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-indigo-600 text-3xl mb-4"><i class="fas fa-table-list"></i></div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Auditable Decision Tables</h3>
+                    <p class="text-gray-600 text-sm">Eligibility criteria encoded as versioned decision tables rather than prompt text. Every rule cites its source in the lending handbook, so an outcome can always be traced back to the policy behind it.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-green-600 text-3xl mb-4"><i class="fas fa-magnifying-glass"></i></div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Grounded Extraction</h3>
+                    <p class="text-gray-600 text-sm">Each extracted value is verified against the document's own text. Low-confidence values are escalated for human confirmation instead of flowing silently into a decision.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-purple-600 text-3xl mb-4"><i class="fas fa-user-shield"></i></div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Privacy by Design</h3>
+                    <p class="text-gray-600 text-sm">Inference runs locally and real applicant data never leaves the environment. Development runs on synthetic applicants, and structured identifiers stay masked in the console until explicitly revealed.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-600 text-3xl mb-4"><i class="fas fa-file-pdf"></i></div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Two Extraction Paths</h3>
+                    <p class="text-gray-600 text-sm">Native-text PDFs go through a digit-perfect extractor with no GPU and no OCR error. Images and scans route to a vision model. Both produce the same contract, so the triage layer never knows the difference.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-3xl mb-4" style="color:#ea580c;"><i class="fas fa-user-check"></i></div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Human in the Loop</h3>
+                    <p class="text-gray-600 text-sm">Four triage outcomes with cited reasons and an explicit needs-review list. The system never auto-approves &mdash; it prepares the decision, a caseworker makes it.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-3xl mb-4" style="color:#0891b2;"><i class="fas fa-chart-column"></i></div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Measured, Not Assumed</h3>
+                    <p class="text-gray-600 text-sm">An evaluation store compares system decisions against human-reviewer decisions on the same cases, so accuracy is tracked over time rather than claimed once.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Projects -->
+    <div class="bg-white py-16">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <a href="../index.html#projects" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full shadow-md transition duration-300">
+                <i class="fas fa-arrow-left mr-2"></i> Back to All Projects
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>&copy; 2024 James Montoya. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <style>
+        .carousel-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .carousel-image.active { opacity: 1; }
+        .carousel-dot.active { background-color: rgba(255,255,255,0.9) !important; }
+        .carousel-btn { opacity: 0; transition: opacity 0.3s ease; }
+        #doctriage-carousel:hover .carousel-btn { opacity: 1; }
+        .yt-facade img { transition: transform 0.4s ease, opacity 0.3s ease; }
+        .yt-facade:hover img { transform: scale(1.03); opacity: 0.85; }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // Click-to-play YouTube facades: nothing loads from YouTube until the visitor asks.
+            document.querySelectorAll('.yt-facade').forEach(function(facade) {
+                function play() {
+                    var id = facade.getAttribute('data-yt');
+                    var title = facade.getAttribute('data-title') || 'Video';
+                    var iframe = document.createElement('iframe');
+                    iframe.className = 'absolute inset-0 w-full h-full';
+                    iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+                    iframe.title = title;
+                    iframe.setAttribute('frameborder', '0');
+                    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+                    iframe.setAttribute('allowfullscreen', '');
+                    facade.innerHTML = '';
+                    facade.appendChild(iframe);
+                    facade.classList.remove('cursor-pointer');
+                }
+                facade.addEventListener('click', play);
+                facade.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); play(); }
+                });
+            });
+
+            // Screenshot carousel
+            var carousel = document.getElementById('doctriage-carousel');
+            if (!carousel) return;
+            var images = carousel.querySelectorAll('.carousel-image');
+            var dots = carousel.querySelectorAll('.carousel-dot');
+            var prevBtn = carousel.querySelector('.prev-btn');
+            var nextBtn = carousel.querySelector('.next-btn');
+            var currentSlide = 0;
+            var autoSlideInterval;
+
+            function showSlide(index) {
+                images.forEach(function(img) { img.classList.remove('active'); });
+                dots.forEach(function(dot) { dot.classList.remove('active'); });
+                images[index].classList.add('active');
+                dots[index].classList.add('active');
+                currentSlide = index;
+            }
+            function nextSlide() { showSlide((currentSlide + 1) % images.length); }
+            function prevSlide() { showSlide((currentSlide - 1 + images.length) % images.length); }
+            function startAuto() { autoSlideInterval = setInterval(nextSlide, 4000); }
+            function stopAuto() { clearInterval(autoSlideInterval); }
+
+            nextBtn.addEventListener('click', function() { nextSlide(); stopAuto(); startAuto(); });
+            prevBtn.addEventListener('click', function() { prevSlide(); stopAuto(); startAuto(); });
+            dots.forEach(function(dot, i) { dot.addEventListener('click', function() { showSlide(i); stopAuto(); startAuto(); }); });
+            carousel.addEventListener('mouseenter', stopAuto);
+            carousel.addEventListener('mouseleave', startAuto);
+            startAuto();
+        });
+    </script>
+
+</body>
+</html>

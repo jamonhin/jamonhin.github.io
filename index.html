@@ -219,7 +219,7 @@
                         <div class="absolute top-0 right-0 bg-green-600 text-white px-3 py-1 m-2 rounded-full text-xs">2026 &ndash; Validation Phase</div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">AI Document-Validation Pipeline for No-Interest Microloan Assessments</h3>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">DocTriage &mdash; AI Document-Validation Pipeline for No-Interest Microloan Assessments</h3>
                         <p class="text-gray-600 mb-4">An AI pipeline that reads and validates microloan application documents against codified eligibility rules, producing an auditable recommendation for a caseworker to decide &mdash; privacy by design. Built for an Australian no-interest loan (NILS) provider, it replaces the manual review of large applicant document packs with a structured, traceable result. The pipeline ingests both native-text PDFs and image scans via OCR, classifies each document type, extracts the relevant fields per type across identity, income, banking, tenancy and supplier-quote documents, then validates them against the program's eligibility criteria encoded as versioned decision tables &mdash; each rule citing its source in the lending handbook, so every outcome is auditable. Extracted values are grounded against the document's own text, and anything low-confidence is flagged for human confirmation rather than trusted blindly. The system returns a triage outcome with human-readable reasons and a needs-review list; it never auto-approves, so a caseworker always makes the final call. Privacy is architectural: real applicant data never leaves the local environment, development and testing run entirely on synthetic applicants, and only de-identified evaluation data is persisted for quality tracking against human-reviewer decisions.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Python</span>
@@ -234,8 +234,15 @@
                             <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">CRM Integration</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <span class="text-gray-500 text-sm italic">Confidential client engagement &mdash; architecture walkthrough on request</span>
-                            <i class="fas fa-lock text-gray-400 text-xl"></i>
+                            <a href="projects/doctriage.html" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                View Details
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                            <a href="projects/doctriage.html" class="text-gray-500 hover:text-gray-700" aria-label="DocTriage project details">
+                                <i class="fas fa-play-circle text-xl"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
