@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DocTriage — AI Document-Validation Pipeline - James Montoya</title>
+    <meta name="description" content="An AI pipeline that reads and validates microloan application documents against codified eligibility rules, producing an auditable recommendation for a caseworker to decide. Privacy by design, local inference, human-in-the-loop.">
+    <link rel="canonical" href="https://jamonhin.github.io/projects/doctriage.html">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://jamonhin.github.io/projects/doctriage.html">
+    <meta property="og:title" content="DocTriage — AI Document-Validation Pipeline — James Montoya">
+    <meta property="og:description" content="An AI pipeline that reads and validates microloan application documents against codified eligibility rules, producing an auditable recommendation for a caseworker to decide. Privacy by design, local inference, human-in-the-loop.">
+    <meta property="og:image" content="https://jamonhin.github.io/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://jamonhin.github.io/assets/img/og-cover.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -142,10 +153,10 @@
             <p class="text-gray-600 mb-8 text-center max-w-3xl mx-auto">The review console, the orchestration workflows, and the document pack a single applicant submits.</p>
             <div class="w-full h-64 md:h-96 bg-gray-200 rounded-xl shadow-lg overflow-hidden relative" id="doctriage-carousel">
                 <div class="carousel-container relative w-full h-full overflow-hidden">
-                    <img src="../assets/img/nils/triage.png" alt="Caseworker review console showing the system's triage recommendation with cited reasons" class="carousel-image w-full h-full object-cover active">
-                    <img src="../assets/img/nils/pipeline.png" alt="Document processing sub-workflow — classification, extraction, OCR routing and triage" class="carousel-image w-full h-full object-cover">
-                    <img src="../assets/img/nils/pipeline-ingest.png" alt="Ingestion orchestration — OCR service health gate and per-applicant batching" class="carousel-image w-full h-full object-cover">
-                    <img src="../assets/img/nils/documents.png" alt="Applicant document pack — ID, income, tenancy, banking and supplier-quote documents for a synthetic applicant" class="carousel-image w-full h-full object-cover">
+                    <img src="../assets/img/nils/triage.png" alt="Caseworker review console showing the system's triage recommendation with cited reasons" class="carousel-image w-full h-full object-cover active" loading="lazy" decoding="async">
+                    <img src="../assets/img/nils/pipeline.png" alt="Document processing sub-workflow — classification, extraction, OCR routing and triage" class="carousel-image w-full h-full object-cover" loading="lazy" decoding="async">
+                    <img src="../assets/img/nils/pipeline-ingest.png" alt="Ingestion orchestration — OCR service health gate and per-applicant batching" class="carousel-image w-full h-full object-cover" loading="lazy" decoding="async">
+                    <img src="../assets/img/nils/documents.png" alt="Applicant document pack — ID, income, tenancy, banking and supplier-quote documents for a synthetic applicant" class="carousel-image w-full h-full object-cover" loading="lazy" decoding="async">
                 </div>
                 <button class="carousel-btn prev-btn absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
