@@ -384,11 +384,27 @@
       buildNav();
       updateProgress();
 
-      // If nothing is published yet, say so plainly rather than looking broken.
-      if (!available().length) {
+      var avail0 = available();
+      if (avail0.length) {
+        // Load the first unwatched lesson, or the first one if all are watched,
+        // so the page opens on something playable instead of a placeholder.
+        var first = avail0.find(function (x) { return !watched[x.id]; }) || avail0[0];
+        show(flat.findIndex(function (x) { return x.id === first.id; }));
+      } else {
+        // Nothing published yet — say so plainly rather than looking broken.
         document.getElementById('lesson-desc').textContent =
           'The lessons are being uploaded. Check back shortly, or send me a question in the meantime and I will let you know when they are live.';
       }
+
+      // "Start the course" should start it, not just scroll to it.
+      document.querySelectorAll('a[href="#course"]').forEach(function (a) {
+        a.addEventListener('click', function () {
+          var av = available();
+          if (!av.length) return;
+          var target = av.find(function (x) { return !watched[x.id]; }) || av[0];
+          show(flat.findIndex(function (x) { return x.id === target.id; }));
+        });
+      });
     })();
     </script>
 
