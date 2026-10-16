@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>James Montoya - Resume</title>
+<style>
+  @page { size: A4; margin: 14mm 16mm; }
+  body { font-family: Arial, Helvetica, sans-serif; font-size: 10.5pt; line-height: 1.38; color: #000; max-width: 820px; margin: 0 auto; }
+  h1 { font-size: 20pt; margin: 0 0 2pt 0; letter-spacing: 0.5pt; }
+  .role { font-size: 11.5pt; font-weight: bold; margin: 0 0 4pt 0; }
+  .contact { font-size: 9.5pt; margin: 0 0 12pt 0; }
+  h2 { font-size: 11pt; text-transform: uppercase; letter-spacing: 0.6pt; border-bottom: 1px solid #000; padding-bottom: 2pt; margin: 14pt 0 7pt 0; }
+  h3 { font-size: 10.5pt; margin: 10pt 0 1pt 0; }
+  .meta { font-size: 9.5pt; margin: 0 0 4pt 0; }
+  ul { margin: 3pt 0 7pt 0; padding-left: 16pt; }
+  li { margin-bottom: 2.5pt; }
+  p { margin: 0 0 7pt 0; }
+  .sub { font-weight: bold; margin: 7pt 0 1pt 0; font-size: 10pt; }
+  .skillrow { margin: 0 0 4pt 0; }
+</style>
+</head>
+<body>
+
+<h1>JAMES MONTOYA</h1>
+<p class="role">AI Engineer - Document AI, RAG Systems and Agentic Pipelines</p>
+<p class="contact">
+Sydney, NSW, Australia | Australian Citizen<br>
+Email: james@ethicalaispecialists.com.au | Phone: 0415 097 124<br>
+LinkedIn: linkedin.com/in/james-montoya | Portfolio: jamonhin.github.io
+</p>
+
+<h2>Professional Summary</h2>
+<p>AI engineer with twenty years of experience across enterprise data engineering and, for the last three, production AI and LLM systems. Twelve of those years were spent building ETL pipelines, data models and reporting platforms in banking and telecommunications, which is why I treat an AI system as a data system: ingestion, transformation, storage, retrieval and presentation. Currently running an independent AI practice serving three concurrent clients across not-for-profit lending, defence recruitment and financial services. Track record of reducing manual processes by up to 95 percent and delivering systems from concept to production in days rather than months, in regulated environments.</p>
+
+<h2>Core Skills</h2>
+<p class="skillrow"><strong>AI and LLM Engineering:</strong> Intelligent Document Processing, Retrieval Augmented Generation, AI Agents and Agentic Workflows, Large Language Models (Claude, OpenAI, Gemini, Amazon Bedrock, Ollama), Local LLM Inference (vLLM), Prompt Engineering, Model Evaluation and Benchmarking, Vector Search, OCR and Document Intelligence, Responsible AI and Governance</p>
+<p class="skillrow"><strong>Integration and Automation:</strong> n8n (self-hosted, production), Multi-Agent Orchestration, REST API Design, Webhooks, Event-Driven Architecture, Batch Integration, Apache Airflow, HubSpot, Salesforce, Microsoft 365 APIs, Google Workspace APIs</p>
+<p class="skillrow"><strong>Programming:</strong> Python, TypeScript, JavaScript, SQL, AQL, PHP, Java, Node.js, React, Next.js, FastAPI</p>
+<p class="skillrow"><strong>Data and Databases:</strong> ArangoDB (document, graph, vector), PostgreSQL, pgvector, Supabase, Neo4j, SQL Server, Oracle, MySQL, Data Modelling, ETL Pipelines, SSIS, Reporting Warehouses, Grafana</p>
+<p class="skillrow"><strong>Cloud and Infrastructure:</strong> AWS (EC2, S3, Lambda, Bedrock, OpenSearch, API Gateway), Docker, Traefik, Nginx, Azure (Teams, SharePoint, OneDrive APIs), Google Cloud, Serverless Architectures, CI/CD</p>
+
+<h2>Professional Experience</h2>
+
+<h3>AI Consultant - Independent Practice</h3>
+<p class="meta">Ethical AI Specialists | Sydney, Australia | November 2023 to Present</p>
+<p>Independent AI practice delivering production systems for three concurrent clients across not-for-profit lending, defence recruitment and financial services.</p>
+
+<p class="sub">Australian Not-for-Profit Lender (May 2026 to Present)</p>
+<ul>
+<li>Built DocTriage, an AI document validation pipeline for no-interest microloan assessments, processing applicant document packs across eight categories including identity, income, banking, tenancy and supplier quotes.</li>
+<li>Designed two extraction paths behind a single contract: a digit-perfect native PDF extractor requiring no GPU, and a GPU vision OCR service for scans and images, with per-file-type routing and a service health gate before each batch.</li>
+<li>Encoded eligibility criteria as versioned, auditable decision tables, each rule citing its source in the lending handbook, so every automated outcome can be traced back to the policy that produced it.</li>
+<li>Implemented grounded extraction: every extracted value is verified against the source document text, and low-confidence values are escalated for human confirmation rather than passed downstream.</li>
+<li>Delivered privacy-by-design architecture: local LLM inference so applicant data never leaves the environment, synthetic applicants throughout development, and masked identifiers in the review console. The system never auto-approves; a caseworker makes every final decision.</li>
+<li>Created and delivered an AI training programme for non-technical not-for-profit teams covering safe adoption, data governance and practical tooling.</li>
+<li>Automated the end-to-end lead data pipeline for Meta digital acquisition campaigns.</li>
+<li>Technologies: Python, Docker, vLLM, vision OCR, decision-table rules engine, n8n, SQLite, CRM integration.</li>
+</ul>
+
+<p class="sub">Defence and Government Recruitment Firm (June 2025 to Present)</p>
+<ul>
+<li>Built a multi-stage AI recruitment pipeline covering CV ingestion, structured extraction of skills, security clearances and capability domains, and graph-based storage in ArangoDB.</li>
+<li>Designed a multi-agent architecture (router, query builder, response formatter, validator) orchestrated through n8n and surfaced to recruiters as a conversational agent inside Microsoft Teams.</li>
+<li>Extended the platform into executive reporting: n8n ingestion of HubSpot contacts and deals into an ArangoDB reporting warehouse, a read-only FastAPI service exposing 16 metric endpoints, and two Grafana dashboards provisioned as code and deployed on AWS EC2.</li>
+<li>Delivered HubSpot integration processing approximately 1,759 contacts with AGSVA clearance and skills data.</li>
+<li>Automated resume processing, reducing manual data entry by 95 percent, with dual-layer skill extraction preventing domain mismatches at over 90 percent accuracy.</li>
+</ul>
+
+<p class="sub">eThink Solutions (November 2025 to Present)</p>
+<ul>
+<li>Built a RAG system adding document intelligence to a custom mortgage broker CRM, processing over 150 loan documents at 95 percent accuracy using Claude as the LLM layer and reducing manual lookup time by 80 percent.</li>
+<li>Designed an ArangoDB multi-model schema combining document store, graph and vector search for document classification, chunk-level tagging and relationship mapping between banks, processes and compliance requirements.</li>
+<li>Built Sage, a multi-tenant voice AI platform where elderly people record life stories by talking to a conversational AI and choose what their family can hear. The browser connects to the OpenAI Realtime API over WebRTC using short-lived server-minted tokens so the API key never reaches the client, and consent is enforced in Postgres row-level security rather than in the interface. Eleven languages with cached translations and semantic search.</li>
+<li>Built the AwareIM XML Generator, a reusable Claude skill turning a Markdown application specification into import-safe application XML, gated by a 19-check pre-flight validator so output the platform would reject never ships.</li>
+<li>Technologies: n8n, ArangoDB, Claude API, AWS (EC2, S3), Docker, Traefik, Python, Next.js, TypeScript, Supabase, OpenAI Realtime API.</li>
+</ul>
+
+<p class="sub">Earlier Independent Work (November 2023 to November 2024)</p>
+<ul>
+<li>Built a production-ready RAG chatbot with PostgreSQL, pgvector, Next.js 15, React and Redis, and a Jobseeker multi-agent system using LangChain, CrewAI and OpenAI.</li>
+<li>Developed Docker-based ML environments, automated ETL with Apache Airflow, and predictive models for nonprofit donor behaviour using clustering.</li>
+</ul>
+
+<h3>Relocation to Australia and Postgraduate Study</h3>
+<p class="meta">Sydney, Australia | 2017 to 2023</p>
+<ul>
+<li>Relocated from Colombia to Australia; now an Australian citizen.</li>
+<li>Completed Certificate III in English at TAFE NSW, a Diploma of Software Development at Warwick Institute of Australia, and a Master of Software Engineering (AI Specialisation) at Torrens University Australia, pivoting from enterprise data engineering into applied AI.</li>
+</ul>
+
+<h3>Data Engineer and Business Intelligence Developer</h3>
+<p class="meta">Tigo (Telecommunications) | Colombia | 2014 to 2017</p>
+<ul>
+<li>Built a mobile KPI dashboard application for executives: an Apache PhoneGap front end backed by a PHP services API over SQL Server, including interface design.</li>
+<li>Created ETL packages in SSIS for multi-source data integration across business systems.</li>
+<li>Automated reporting systems using SQL Server, reducing manual effort by 80 percent.</li>
+<li>Implemented data scraping and processing solutions with Python.</li>
+<li>Designed real-time data visualisation systems using QlikView for executive decision-making.</li>
+<li>Technologies: SQL Server, SSIS, PHP, Python, QlikView, Apache PhoneGap, JavaScript, VBA.</li>
+</ul>
+
+<h3>Analyst Developer and Database Specialist</h3>
+<p class="meta">Grupo Bancolombia (Financial Services) | Colombia | 2006 to 2014</p>
+<ul>
+<li>Led treasury database reporting migration in a regulated banking environment, ensuring audit compliance and seamless transition.</li>
+<li>Developed Java applications for Murex financial system integration and data processing.</li>
+<li>Implemented reporting solutions using Datamart and SAP Business Objects.</li>
+<li>Managed Murex system transition, optimising financial data processes and system integration.</li>
+<li>Created VBA macros automating spreadsheet-to-production migrations.</li>
+<li>Technologies: Oracle, SQL, Java (Murex), VBA, SSIS, SAP Business Objects, Datamart.</li>
+</ul>
+
+<h2>Education</h2>
+<h3>Master of Software Engineering (AI Specialisation)</h3>
+<p class="meta">Torrens University Australia | Sydney, Australia | 2021 to 2023</p>
+<h3>Diploma of Software Development</h3>
+<p class="meta">Warwick Institute of Australia | Sydney, Australia | 2018 to 2020</p>
+<h3>Certificate III in English</h3>
+<p class="meta">TAFE NSW | Sydney, Australia | 2018</p>
+<h3>Specialization in Software Development</h3>
+<p class="meta">Universidad de Medellin | Colombia | 2013</p>
+<h3>Bachelor of Computer Science</h3>
+<p class="meta">Politecnico Jaime Isaza Cadavid | Colombia | 2009</p>
+
+<h2>Selected Projects</h2>
+<ul>
+<li><strong>DocTriage - AI Document Validation Pipeline (2026):</strong> Intelligent document processing for microloan assessments. Walkthrough: youtu.be/o7USxW7kreY and youtu.be/Z-52Q6Odrcw</li>
+<li><strong>Voice of the Customer Analytics Platform (2026):</strong> End-to-end n8n pipeline extracting 16 structured fields from insurance call transcripts using Gemini 2.5 Flash, stored in ArangoDB and served through a live webhook dashboard. Benchmarked GPT-4.1 Mini against Gemini 2.5 Flash on identical transcripts before selecting a model. Walkthrough: youtu.be/aUAvT4RlgSw</li>
+<li><strong>Sage - Voice AI Platform (2026):</strong> Multi-tenant voice AI for preserving life stories. Demo: youtu.be/xZAFn2mvJYw</li>
+<li><strong>Jobseeker Multi-Agent System (2025):</strong> Multi-agent application system using Python, LangChain, CrewAI and OpenAI.</li>
+<li><strong>ML-Powered Donor Analysis (2023 to 2024):</strong> Donor behaviour analysis using Docker, Python, Apache Airflow, Scikit-Learn and K-Means clustering.</li>
+</ul>
+
+<h2>Key Achievements</h2>
+<ul>
+<li>Designed an auditable document validation pipeline whose eligibility rules live in versioned decision tables, each citing its source policy, so every automated outcome can be traced to the rule that produced it.</li>
+<li>Delivered privacy-by-design AI using local inference, with no real applicant information leaving the client environment.</li>
+<li>Reduced manual document lookup time by 80 percent and manual data entry by 95 percent through AI-powered automation.</li>
+<li>Achieved over 95 percent accuracy in intelligent document processing across more than 150 documents.</li>
+<li>Built a reporting warehouse and two provisioned-as-code Grafana dashboards over a HubSpot to ArangoDB pipeline deployed on AWS.</li>
+<li>Benchmarked competing language models on identical production data before committing to one.</li>
+<li>Migrated complex financial database systems at enterprise scale in regulated banking.</li>
+<li>Delivered AI training programmes for not-for-profit organisations.</li>
+</ul>
+
+</body>
+</html>

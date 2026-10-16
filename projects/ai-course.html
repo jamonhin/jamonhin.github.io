@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confident with AI — A Practical Guide for Not-for-Profits | James Montoya</title>
+    <meta name="description" content="A free, practical AI course for not-for-profit teams: how to work with AI safely, write prompts that work, and use deep research for strategic decisions. No technical background needed.">
+    <link rel="canonical" href="https://jamonhin.github.io/projects/ai-course.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jamonhin.github.io/projects/ai-course.html">
+    <meta property="og:title" content="Confident with AI — A Free Practical Guide for Not-for-Profits">
+    <meta property="og:description" content="A free, practical AI course for not-for-profit teams. Safe adoption, prompting, and deep research — no technical background needed.">
+    <meta property="og:image" content="https://jamonhin.github.io/assets/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://jamonhin.github.io/assets/img/og-cover.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-30">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <a href="../index.html" class="flex items-center py-4">
+                        <span class="font-semibold text-gray-500 text-lg">James Montoya</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <a href="../index.html#projects" class="py-4 px-2 text-gray-500 hover:text-blue-500">Projects</a>
+                    <a href="../index.html#contact" class="py-4 px-2 text-gray-500 hover:text-blue-500">Contact</a>
+                    <a href="https://www.linkedin.com/in/james-montoya/" target="_blank" rel="noopener" class="py-4 px-2 text-gray-500 hover:text-blue-600" aria-label="LinkedIn"><i class="fab fa-linkedin text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Course Header -->
+    <div class="bg-white border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 py-10">
+            <div class="flex flex-col md:flex-row md:items-center">
+                <div class="md:w-2/3 md:pr-10">
+                    <span class="inline-block bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full mb-3">FREE &middot; NO SIGN-UP</span>
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">Confident with AI</h1>
+                    <h2 class="text-xl text-gray-600 mb-4">A Practical Guide for Not-for-Profits</h2>
+                    <p class="text-gray-600 mb-5">Most AI training either stays abstract or assumes you can code. This one does neither. It's built for people who run programmes, write grants, manage teams and talk to donors &mdash; and who want to use AI well without guessing at the risks.</p>
+                    <p class="text-gray-600 mb-6">Four modules, taken at your own pace. Nothing to sign up for, nothing to buy.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#course" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full shadow-md transition duration-300 flex items-center">
+                            <i class="fas fa-play-circle mr-2"></i> Start the course
+                        </a>
+                        <a href="#ask" class="bg-white hover:bg-gray-50 text-blue-600 border border-blue-200 font-medium py-2 px-6 rounded-full shadow-md transition duration-300 flex items-center">
+                            <i class="fas fa-comment-dots mr-2"></i> Ask a question
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/3 mt-8 md:mt-0">
+                    <img src="../assets/img/training/Course-0.png" alt="Confident with AI course" class="w-full rounded-xl shadow-lg" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why free -->
+    <div class="bg-gray-50 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 py-8">
+            <div class="grid md:grid-cols-3 gap-6">
+                <div>
+                    <div class="text-blue-600 text-2xl mb-2"><i class="fas fa-unlock"></i></div>
+                    <h3 class="font-bold text-gray-800 mb-1">Why it's free</h3>
+                    <p class="text-gray-600 text-sm">I built this for a not-for-profit client. Budget is the number one barrier stopping the sector from adopting AI safely, so charging for the fix seemed backwards.</p>
+                </div>
+                <div>
+                    <div class="text-blue-600 text-2xl mb-2"><i class="fas fa-user-group"></i></div>
+                    <h3 class="font-bold text-gray-800 mb-1">Who it's for</h3>
+                    <p class="text-gray-600 text-sm">Not-for-profit staff and volunteers with no technical background. If you've used AI and been unsure whether you were doing it right, this is for you.</p>
+                </div>
+                <div>
+                    <div class="text-blue-600 text-2xl mb-2"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="font-bold text-gray-800 mb-1">What makes it different</h3>
+                    <p class="text-gray-600 text-sm">Guardrails come first. What not to paste in, how to check an answer, when to stop trusting it &mdash; alongside how to get good results.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Course -->
+    <div class="max-w-6xl mx-auto px-4 py-10" id="course">
+        <div class="flex flex-col lg:flex-row gap-8">
+
+            <!-- Sidebar -->
+            <aside class="lg:w-1/3">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden lg:sticky lg:top-20">
+                    <div class="px-5 py-4 border-b border-gray-200">
+                        <h3 class="font-bold text-gray-800">Course content</h3>
+                        <p class="text-sm text-gray-500 mt-1"><span id="lesson-count">0</span> lessons &middot; 4 modules</p>
+                        <div class="mt-3">
+                            <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div id="progress-bar" class="h-2 bg-green-500 rounded-full transition-all duration-300" style="width:0%"></div>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1"><span id="progress-text">0 of 0 watched</span> &middot; <button id="reset-progress" type="button" class="text-blue-600 hover:underline">reset</button></p>
+                        </div>
+                    </div>
+                    <nav id="curriculum" class="max-h-screen overflow-y-auto"></nav>
+                </div>
+            </aside>
+
+            <!-- Lesson view -->
+            <main class="lg:w-2/3">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div id="player-wrap" class="relative bg-gray-900" style="padding-bottom:56.25%;">
+                        <div id="player" class="absolute inset-0 w-full h-full flex items-center justify-center text-center p-6">
+                            <div>
+                                <i class="fas fa-play-circle text-white text-5xl mb-3 opacity-80"></i>
+                                <p class="text-white text-sm opacity-90">Pick a lesson to begin</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-blue-600 font-medium mb-1" id="lesson-module">&nbsp;</p>
+                        <h2 class="text-2xl font-bold text-gray-800 mb-3" id="lesson-title">Welcome</h2>
+                        <p class="text-gray-600 mb-5" id="lesson-desc">Four modules that take you from "I've tried ChatGPT once" to using AI deliberately and safely in your day-to-day work. Start with Module 1 and work through in order, or jump to whatever you need.</p>
+                        <div id="lesson-resources" class="mb-5"></div>
+                        <div class="flex justify-between items-center border-t border-gray-200 pt-4">
+                            <button id="prev-lesson" type="button" class="text-gray-500 hover:text-gray-800 font-medium flex items-center disabled:opacity-30">
+                                <i class="fas fa-arrow-left mr-2"></i> Previous
+                            </button>
+                            <button id="mark-done" type="button" class="bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2 px-4 rounded-full transition duration-300">
+                                <i class="fas fa-check mr-1"></i> Mark as watched
+                            </button>
+                            <button id="next-lesson" type="button" class="text-blue-600 hover:text-blue-800 font-medium flex items-center disabled:opacity-30">
+                                Next <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Ask / community -->
+    <div class="bg-white border-t border-gray-200" id="ask">
+        <div class="max-w-4xl mx-auto px-4 py-12 text-center">
+            <h2 class="text-2xl font-bold text-gray-800 mb-3">Got a question, or something you'd like to automate?</h2>
+            <p class="text-gray-600 mb-6 max-w-2xl mx-auto">This course is the starting point, not the end of it. If something didn't land, if you're stuck on a real problem at your organisation, or if you've got a manual process you suspect could be automated &mdash; tell me about it. I read everything, and the good questions shape what I record next.</p>
+            <div class="flex flex-wrap gap-3 justify-center mb-8">
+                <a href="mailto:james@ethicalaispecialists.com.au?subject=Confident%20with%20AI%20%E2%80%94%20question" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-7 rounded-full shadow-md transition duration-300 flex items-center">
+                    <i class="fas fa-envelope mr-2"></i> Send me a question
+                </a>
+                <a href="https://www.linkedin.com/in/james-montoya/" target="_blank" rel="noopener" class="bg-white hover:bg-gray-50 text-blue-600 border border-blue-200 font-medium py-3 px-7 rounded-full shadow-md transition duration-300 flex items-center">
+                    <i class="fab fa-linkedin mr-2"></i> Connect on LinkedIn
+                </a>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 text-left">
+                <div class="bg-gray-50 p-5 rounded-lg">
+                    <h3 class="font-bold text-gray-800 mb-1 text-sm">A question about a lesson</h3>
+                    <p class="text-gray-600 text-sm">Something unclear, or you want the longer version of an answer.</p>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-lg">
+                    <h3 class="font-bold text-gray-800 mb-1 text-sm">A process you'd like to automate</h3>
+                    <p class="text-gray-600 text-sm">Describe the manual task. I'll tell you honestly whether AI is the right tool, and roughly what it would take.</p>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-lg">
+                    <h3 class="font-bold text-gray-800 mb-1 text-sm">A topic for a future lesson</h3>
+                    <p class="text-gray-600 text-sm">If several people ask the same thing, it becomes the next module.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About the author -->
+    <div class="bg-gray-50 border-t border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 py-10">
+            <div class="flex flex-col sm:flex-row items-center gap-6">
+                <img src="../assets/img/profile-photo.png" alt="James Montoya" class="w-24 h-24 rounded-full object-cover shadow-md" loading="lazy" decoding="async">
+                <div>
+                    <h3 class="font-bold text-gray-800 text-lg">James Montoya</h3>
+                    <p class="text-gray-600 text-sm mt-1">AI engineer in Sydney. I build document-validation pipelines, RAG platforms and multi-agent automation for clients across not-for-profit, defence recruitment and financial services, on twenty years of enterprise data engineering. I wrote this course because the sector is adopting AI faster than it's learning to govern it.</p>
+                    <a href="../index.html" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center mt-2">See my work <i class="fas fa-arrow-right ml-1 text-xs"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back -->
+    <div class="bg-white py-10">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <a href="../index.html#projects" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full shadow-md transition duration-300">
+                <i class="fas fa-arrow-left mr-2"></i> Back to All Projects
+            </a>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="flex justify-center gap-6 mb-4">
+                <a href="https://www.linkedin.com/in/james-montoya/" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition duration-300" aria-label="LinkedIn"><i class="fab fa-linkedin text-xl"></i></a>
+                <a href="https://github.com/jamonhin" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition duration-300" aria-label="GitHub"><i class="fab fa-github text-xl"></i></a>
+                <a href="mailto:james@ethicalaispecialists.com.au" class="text-gray-400 hover:text-white transition duration-300" aria-label="Email"><i class="fas fa-envelope text-xl"></i></a>
+            </div>
+            <p>&copy; 2026 James Montoya. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <style>
+        .lesson-item.active { background-color: #eff6ff; border-left-color: #2563eb; }
+        .lesson-item { border-left: 3px solid transparent; }
+        .lesson-item:hover { background-color: #f9fafb; }
+        #curriculum::-webkit-scrollbar { width: 6px; }
+        #curriculum::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
+    </style>
+
+    <script>
+    // ---------------------------------------------------------------------
+    // COURSE DATA
+    //
+    // To publish a lesson, paste the YouTube video ID into `yt`.
+    // The ID is the part after "youtu.be/" or "watch?v=".
+    // Example: https://youtu.be/dQw4w9WgXcQ  ->  yt: "dQw4w9WgXcQ"
+    //
+    // Lessons with an empty `yt` show as "coming soon" and are not clickable.
+    // `file` is an optional downloadable resource placed in assets/course/.
+    // ---------------------------------------------------------------------
+    var COURSE = [
+      {
+        module: "Module 1 — The Apprentice Mindset",
+        blurb: "Three digital partners for not-for-profit excellence. What AI is good at, what it isn't, and how to think about it before you start using it.",
+        lessons: [
+          { title: "Meet your three digital partners", yt: "", desc: "An introduction to the tools, what each one is actually for, and why thinking of AI as an apprentice rather than an oracle changes how you use it." },
+          { title: "Where AI helps, and where it doesn't", yt: "", desc: "The tasks AI genuinely accelerates in not-for-profit work, and the ones where it quietly costs you more than it saves." },
+          { title: "Your first real task", yt: "", desc: "Working through a practical example end to end, with a template you can reuse.", file: "" },
+          { title: "Building the habit", yt: "", desc: "How to make AI part of your week without it becoming another system to maintain." }
+        ]
+      },
+      {
+        module: "Module 2 — Know Before You Go",
+        blurb: "Understanding your AI team for safe, strategic partnership. What's happening under the hood, and what that means for what you can trust.",
+        lessons: [
+          { title: "What the model is actually doing", yt: "", desc: "A plain-language explanation of how these systems produce an answer, and why that explains most of their failures." },
+          { title: "Guardrails: what never goes in", yt: "", desc: "Donor data, client records, contracts, credentials. What to do when you genuinely need AI to work on sensitive material." },
+          { title: "Choosing the right tool for the job", yt: "", desc: "The practical differences between the major tools and when each one is the better choice." },
+          { title: "Context windows", yt: "", desc: "Why a long document sometimes breaks an answer, and how to work around it.", file: "" },
+          { title: "Extended thinking", yt: "", desc: "When to let the model reason for longer, and when it's just burning time.", file: "" },
+          { title: "Connecting AI to your systems (MCP)", yt: "", desc: "How AI tools connect to the systems you already use, and what that opens up.", file: "" },
+          { title: "Working with images and documents", yt: "", desc: "Multimodal input in practice: photographs, scans, screenshots and PDFs.", file: "" }
+        ]
+      },
+      {
+        module: "Module 3 — Strategic AI Communication",
+        blurb: "Mastering prompts and context for mission impact. The difference between a question that produces something usable and one that doesn't.",
+        lessons: [
+          { title: "Why most prompts disappoint", yt: "", desc: "The single most common mistake, and the fix that takes ten seconds." },
+          { title: "Giving context that works", yt: "", desc: "What to include, what to leave out, and how to show the model what good looks like." },
+          { title: "Asking for evidence", yt: "", desc: "Making the model quote its source so you can check it, instead of trusting it." },
+          { title: "Iterating towards a good answer", yt: "", desc: "Treating the first response as a draft rather than a verdict." },
+          { title: "Prompts for grant writing and reporting", yt: "", desc: "Worked examples from real not-for-profit tasks." },
+          { title: "Building reusable prompts for your team", yt: "", desc: "Turning something that worked once into something the whole team can use." }
+        ]
+      },
+      {
+        module: "Module 4 — Deep Research",
+        blurb: "From tactical questions to strategic intelligence. Using AI for the research that informs decisions, not just the writing that follows them.",
+        lessons: [
+          { title: "What deep research mode actually does", yt: "", desc: "How it differs from a normal question, and when it's worth the wait." },
+          { title: "Framing a research question", yt: "", desc: "Getting a useful answer depends almost entirely on how you ask." },
+          { title: "Checking what comes back", yt: "", desc: "How to verify sources and spot the claims that don't hold up." },
+          { title: "Research for funding and strategy", yt: "", desc: "Applying it to grant landscapes, sector trends and board papers." },
+          { title: "Where to go from here", yt: "", desc: "What to learn next, and how to keep up without drowning in it." }
+        ]
+      }
+    ];
+
+    (function () {
+      var STORAGE_KEY = 'confident-with-ai-progress';
+      var flat = [];
+      COURSE.forEach(function (m, mi) {
+        m.lessons.forEach(function (l, li) {
+          flat.push({ m: mi, l: li, module: m.module, title: l.title, yt: l.yt, desc: l.desc, file: l.file, id: mi + '-' + li });
+        });
+      });
+
+      var watched = {};
+      try { watched = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch (e) { watched = {}; }
+
+      var current = -1;
+      var nav = document.getElementById('curriculum');
+
+      function available() { return flat.filter(function (x) { return x.yt; }); }
+
+      function save() {
+        try { localStorage.setItem(STORAGE_KEY, JSON.stringify(watched)); } catch (e) {}
+      }
+
+      function updateProgress() {
+        var avail = available();
+        var done = avail.filter(function (x) { return watched[x.id]; }).length;
+        var pct = avail.length ? Math.round(done / avail.length * 100) : 0;
+        document.getElementById('progress-bar').style.width = pct + '%';
+        document.getElementById('progress-text').textContent = done + ' of ' + avail.length + ' watched';
+        document.getElementById('lesson-count').textContent = flat.length;
+      }
+
+      function buildNav() {
+        var html = '';
+        COURSE.forEach(function (m, mi) {
+          html += '<div class="border-b border-gray-100">';
+          html += '<div class="px-5 py-3 bg-gray-50"><p class="font-bold text-gray-800 text-sm">' + m.module + '</p>';
+          html += '<p class="text-xs text-gray-500 mt-1">' + m.blurb + '</p></div>';
+          m.lessons.forEach(function (l, li) {
+            var id = mi + '-' + li;
+            var ready = !!l.yt;
+            var tick = watched[id]
+              ? '<i class="fas fa-circle-check text-green-500 mr-2"></i>'
+              : (ready ? '<i class="far fa-circle text-gray-300 mr-2"></i>' : '<i class="fas fa-lock text-gray-300 mr-2"></i>');
+            html += '<button type="button" data-id="' + id + '" class="lesson-item w-full text-left px-5 py-2.5 text-sm ' +
+                    (ready ? 'text-gray-700 cursor-pointer' : 'text-gray-400 cursor-default') + '"' +
+                    (ready ? '' : ' disabled') + '>' + tick + l.title +
+                    (ready ? '' : ' <span class="text-xs text-gray-400">(coming soon)</span>') + '</button>';
+          });
+          html += '</div>';
+        });
+        nav.innerHTML = html;
+        nav.querySelectorAll('button[data-id]').forEach(function (b) {
+          b.addEventListener('click', function () {
+            var idx = flat.findIndex(function (x) { return x.id === b.getAttribute('data-id'); });
+            if (idx > -1 && flat[idx].yt) show(idx);
+          });
+        });
+      }
+
+      function show(idx) {
+        current = idx;
+        var it = flat[idx];
+        document.getElementById('player').outerHTML =
+          '<iframe id="player" class="absolute inset-0 w-full h-full" ' +
+          'src="https://www.youtube-nocookie.com/embed/' + it.yt + '?rel=0" ' +
+          'title="' + it.title.replace(/"/g, '&quot;') + '" frameborder="0" ' +
+          'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ' +
+          'allowfullscreen></iframe>';
+        document.getElementById('lesson-module').textContent = it.module;
+        document.getElementById('lesson-title').textContent = it.title;
+        document.getElementById('lesson-desc').textContent = it.desc || '';
+        document.getElementById('lesson-resources').innerHTML = it.file
+          ? '<a href="../assets/course/' + it.file + '" download class="inline-flex items-center text-blue-600 hover:text-blue-800 text-sm font-medium"><i class="fas fa-download mr-2"></i>Download the template for this lesson</a>'
+          : '';
+        nav.querySelectorAll('.lesson-item').forEach(function (b) { b.classList.remove('active'); });
+        var active = nav.querySelector('button[data-id="' + it.id + '"]');
+        if (active) { active.classList.add('active'); active.scrollIntoView({ block: 'nearest' }); }
+        var avail = available();
+        var pos = avail.findIndex(function (x) { return x.id === it.id; });
+        document.getElementById('prev-lesson').disabled = pos <= 0;
+        document.getElementById('next-lesson').disabled = pos === -1 || pos >= avail.length - 1;
+        document.getElementById('mark-done').innerHTML = watched[it.id]
+          ? '<i class="fas fa-rotate-left mr-1"></i> Mark as unwatched'
+          : '<i class="fas fa-check mr-1"></i> Mark as watched';
+      }
+
+      function step(dir) {
+        var avail = available();
+        if (!avail.length) return;
+        var pos = current > -1 ? avail.findIndex(function (x) { return x.id === flat[current].id; }) : -1;
+        var next = pos + dir;
+        if (next < 0 || next >= avail.length) return;
+        var idx = flat.findIndex(function (x) { return x.id === avail[next].id; });
+        show(idx);
+      }
+
+      document.getElementById('prev-lesson').addEventListener('click', function () { step(-1); });
+      document.getElementById('next-lesson').addEventListener('click', function () { step(1); });
+      document.getElementById('mark-done').addEventListener('click', function () {
+        if (current < 0) return;
+        var id = flat[current].id;
+        watched[id] = !watched[id];
+        save(); buildNav(); updateProgress(); show(current);
+      });
+      document.getElementById('reset-progress').addEventListener('click', function () {
+        watched = {}; save(); buildNav(); updateProgress();
+        if (current > -1) show(current);
+      });
+
+      buildNav();
+      updateProgress();
+
+      // If nothing is published yet, say so plainly rather than looking broken.
+      if (!available().length) {
+        document.getElementById('lesson-desc').textContent =
+          'The lessons are being uploaded. Check back shortly, or send me a question in the meantime and I will let you know when they are live.';
+      }
+    })();
+    </script>
+
+</body>
+</html>
