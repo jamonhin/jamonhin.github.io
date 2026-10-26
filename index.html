@@ -601,7 +601,7 @@
 
             <div class="text-center mt-12">
                 <button id="more-projects-btn" type="button" class="inline-block bg-white border border-blue-500 text-blue-600 hover:bg-blue-50 font-medium rounded-full px-8 py-3 transition duration-300">
-                    Show 9 More Projects <i class="fas fa-chevron-down ml-2 text-sm"></i>
+                    Show 8 More Projects <i class="fas fa-chevron-down ml-2 text-sm"></i>
                 </button>
             </div>
 
@@ -895,43 +895,7 @@
                     </div>
                 </div>
 
-                <!-- Jobseeker System - Jan 2025 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
-                    <div class="h-48 bg-gray-200 relative">
-                        <iframe
-                                src="https://www.youtube.com/embed/6xFjjsoKWYQ"
-                                title="Jobseeker-CrewAI-Agent"
-                                class="w-full h-full object-cover"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen
-                            ></iframe>
-                        <div class="absolute top-0 right-0 bg-blue-600 text-white px-3 py-1 m-2 rounded-full text-xs">Jan 2025</div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Jobseeker-Agent-system</h3>
-                        <p class="text-gray-600 mb-4">A multi-agent system using LangChain, CrewAI to help job seekers prepare application documents. The system analyzes job postings, compares them with your resume, and generates tailored documents like cover letters and optimized resumes.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Python</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">LangChain</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">CrewAI</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">OpenAI</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">LLM</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">React</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <a href="jobseeker-crewai-agent.html" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
-                                View Details
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                </svg>
-                            </a>
-                            <a href="jobseeker-crewai-agent.html" class="text-gray-500 hover:text-gray-700">
-                                <i class="fas fa-info-circle text-xl"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                
 
                 <!-- ML-Powered Donor Analysis - 2023-2024 -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
@@ -966,7 +930,6 @@
             </div>
     </div>
 </div>
-
 
     <!-- Timeline Section -->
     <div class="bg-gray-50 py-16" id="timeline">
@@ -1297,7 +1260,7 @@
                 moreBtn.addEventListener('click', function() {
                     var hidden = moreGrid.classList.toggle('hidden');
                     moreBtn.innerHTML = hidden
-                        ? 'Show 9 More Projects <i class="fas fa-chevron-down ml-2 text-sm"></i>'
+                        ? 'Show 8 More Projects <i class="fas fa-chevron-down ml-2 text-sm"></i>'
                         : 'Show Fewer Projects <i class="fas fa-chevron-up ml-2 text-sm"></i>';
                     if (!hidden) { moreGrid.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
                 });
