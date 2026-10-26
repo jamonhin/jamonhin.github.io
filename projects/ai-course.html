@@ -154,6 +154,7 @@
                     <i class="fab fa-linkedin mr-2"></i> Connect on LinkedIn
                 </a>
             </div>
+            <p class="text-gray-500 text-sm mb-8">Or write to <button type="button" id="copy-email" class="font-medium text-blue-600 hover:text-blue-800 underline">james@ethicalaispecialists.com.au</button> <span id="copy-note" class="text-green-600 font-medium"></span></p>
             <div class="grid md:grid-cols-3 gap-6 text-left">
                 <div class="bg-gray-50 p-5 rounded-lg">
                     <h3 class="font-bold text-gray-800 mb-1 text-sm">A question about a lesson</h3>
@@ -381,6 +382,25 @@
         watched = {}; save(); buildNav(); updateProgress();
         if (current > -1) show(current);
       });
+
+      // The email address is shown as text and copies on click, because a
+      // mailto: link does nothing visible for anyone without a mail client set up.
+      var copyBtn = document.getElementById('copy-email');
+      if (copyBtn) {
+        copyBtn.addEventListener('click', function () {
+          var addr = copyBtn.textContent.trim();
+          var note = document.getElementById('copy-note');
+          function done() { if (note) { note.textContent = 'copied'; setTimeout(function(){ note.textContent=''; }, 2000); } }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(addr).then(done).catch(function(){});
+          } else {
+            var t = document.createElement('textarea');
+            t.value = addr; document.body.appendChild(t); t.select();
+            try { document.execCommand('copy'); done(); } catch (e) {}
+            document.body.removeChild(t);
+          }
+        });
+      }
 
       buildNav();
       updateProgress();
