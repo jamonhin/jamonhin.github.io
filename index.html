@@ -382,9 +382,23 @@
 
                 <!-- Project - Recruitment BI Platform (Defence & Government recruitment client) -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
-                    <div class="h-48 relative bg-gray-200 flex items-center justify-center" style="background-image: linear-gradient(135deg, #6366f1 0%, #1e40af 100%);">
-                        <i class="fas fa-chart-line text-white text-6xl opacity-90"></i>
-                        <div class="absolute top-0 right-0 bg-green-600 text-white px-3 py-1 m-2 rounded-full text-xs">Aug 2026 &ndash; In Progress</div>
+                    <div class="h-48 relative bg-gray-200">
+                        <div class="yt-facade absolute inset-0 bg-gray-900 cursor-pointer overflow-hidden"
+                             data-yt="QIGUxZn7GU0"
+                             data-title="The CEO Had 42 Questions. One Dashboard Answers">
+                            <img src="https://i.ytimg.com/vi/QIGUxZn7GU0/maxresdefault.jpg"
+                                 alt="Animated explainer: scattered HubSpot and LinkedIn data collected nightly into a three-layer warehouse that feeds one dashboard"
+                                 class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async">
+                            <span class="absolute inset-0 flex items-center justify-center" role="button" tabindex="0" aria-label="Play the Recruitment BI explainer video">
+                                <span class="bg-red-600 hover:bg-red-700 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-xl transition duration-300">
+                                    <i class="fas fa-play text-xl ml-1"></i>
+                                </span>
+                            </span>
+                            <span class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 text-white text-xs px-3 py-1">
+                                How it works &mdash; 72-second explainer
+                            </span>
+                        </div>
+                        <div class="absolute top-0 right-0 bg-green-600 text-white px-3 py-1 m-2 rounded-full text-xs z-10">Aug 2026 &ndash; In Progress</div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-800 mb-2">Recruitment BI Platform &mdash; Executive Reporting for a Defence &amp; Government Recruiter</h3>
@@ -405,8 +419,15 @@
                             <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">AWS EC2</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <span class="text-gray-500 text-sm italic">Private client work &mdash; walkthrough available on request</span>
-                            <i class="fas fa-lock text-gray-400 text-xl"></i>
+                            <a href="https://youtu.be/QIGUxZn7GU0" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                Watch the explainer <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                            <span class="flex items-center gap-3">
+                                <a href="https://youtu.be/QIGUxZn7GU0" target="_blank" rel="noopener" class="text-gray-500 hover:text-gray-700" aria-label="Recruitment BI explainer video on YouTube">
+                                    <i class="fab fa-youtube text-xl"></i>
+                                </a>
+                                <i class="fas fa-lock text-gray-400 text-xl" title="Private client work &mdash; walkthrough available on request"></i>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -1165,6 +1186,9 @@
         #training-carousel:hover .carousel-btn {
             opacity: 1;
         }
+
+        .yt-facade img { transition: transform 0.4s ease, opacity 0.3s ease; }
+        .yt-facade:hover img { transform: scale(1.03); opacity: 0.85; }
     </style>
 
     <script>
@@ -1268,6 +1292,27 @@
                     if (!hidden) { moreGrid.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
                 });
             }
+
+            // Click-to-play YouTube facades: nothing loads from YouTube until the visitor asks.
+            document.querySelectorAll('.yt-facade').forEach(function(facade) {
+                function play() {
+                    var id = facade.getAttribute('data-yt');
+                    var iframe = document.createElement('iframe');
+                    iframe.className = 'absolute inset-0 w-full h-full';
+                    iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+                    iframe.title = facade.getAttribute('data-title') || 'Video';
+                    iframe.setAttribute('frameborder', '0');
+                    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+                    iframe.setAttribute('allowfullscreen', '');
+                    facade.innerHTML = '';
+                    facade.appendChild(iframe);
+                    facade.classList.remove('cursor-pointer');
+                }
+                facade.addEventListener('click', play);
+                facade.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); play(); }
+                });
+            });
 
             initCarousel('nils-carousel');
             initCarousel('rag-chatbot-carousel');
