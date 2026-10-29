@@ -1,7 +1,10 @@
-# Recruitment Reporting Warehouse & Executive Dashboards · Screenshots
+# Recruitment BI Platform · Screenshots
 
-Card in `index.html`: *"Recruitment Reporting Warehouse & Executive Dashboards"*.
-Currently uses an indigo/blue gradient + `fa-chart-line` placeholder.
+Card in `index.html`: *"Recruitment BI Platform — Executive Reporting for a Defence & Government
+Recruiter"*. Currently uses an indigo/blue gradient + `fa-chart-line` placeholder.
+
+The 72-second animated explainer is the better header candidate than any screenshot — it carries
+no client data at all. Prefer it if it goes to YouTube.
 
 > **Folder name is deliberately generic.** The client is anonymised throughout the portfolio as
 > *"a Defence & Government recruitment firm"* — matching how `index.html` already described them

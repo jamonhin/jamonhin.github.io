@@ -186,7 +186,7 @@
 
                 <h3 class="text-xl font-bold text-gray-800 pt-4">What I'm Building Right Now</h3>
 
-                <p>For a Defence &amp; Government recruitment firm, I designed and built an end-to-end AI recruitment pipeline: CV ingestion, structured data extraction (skills, security clearances, capability domains), graph-based storage in ArangoDB, and a conversational AI agent accessible through Microsoft Teams. The system uses a multi-agent architecture — router, query builder, response formatter, and validator — orchestrated through n8n, enabling recruiters to find candidates through natural language queries instead of manual database searches. I'm now extending that platform into executive reporting: n8n workflows ingest HubSpot contacts and deals into an ArangoDB reporting warehouse, a read-only FastAPI service exposes the metrics over AQL, and two dashboards &mdash; an operational Master Report for the CEO and a revenue Loss Analysis &mdash; are provisioned as code in Grafana and deployed on AWS EC2.</p>
+                <p>For a Defence &amp; Government recruitment firm, I designed and built an end-to-end AI recruitment pipeline: CV ingestion, structured data extraction (skills, security clearances, capability domains), graph-based storage in ArangoDB, and a conversational AI agent accessible through Microsoft Teams. The system uses a multi-agent architecture — router, query builder, response formatter, and validator — orchestrated through n8n, enabling recruiters to find candidates through natural language queries instead of manual database searches. I'm now extending that platform into executive reporting: nightly n8n workflows ingest HubSpot and LinkedIn data into a three-layer ArangoDB warehouse, a read-only FastAPI service exposes the metrics over AQL, and an executive dashboard answering the CEO's 42 business questions is provisioned as code in Grafana and deployed on AWS EC2, with 276 automated checks validating every metric against an independent calculation.</p>
 
                 <p>For eThink Solutions — an award-winning Australian custom application and BI company whose clients include Lyft, GrainCorp, and DP World — I'm building a RAG system that enhances their mortgage broker CRM with document intelligence. The platform processes 150+ loan documents with 95%+ accuracy, classifies and chunks content at granular levels, maps relationships between banks, processes, and compliance requirements through a graph model, and lets staff query everything through natural conversation. Manual document lookup time has been reduced by 80%.</p>
 
@@ -380,15 +380,15 @@
                     </div>
                 </div>
 
-                <!-- Project - Recruitment Reporting Warehouse & Executive Dashboards (Defence & Government recruitment client) -->
+                <!-- Project - Recruitment BI Platform (Defence & Government recruitment client) -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
                     <div class="h-48 relative bg-gray-200 flex items-center justify-center" style="background-image: linear-gradient(135deg, #6366f1 0%, #1e40af 100%);">
                         <i class="fas fa-chart-line text-white text-6xl opacity-90"></i>
                         <div class="absolute top-0 right-0 bg-green-600 text-white px-3 py-1 m-2 rounded-full text-xs">Aug 2026 &ndash; In Progress</div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Recruitment Reporting Warehouse &amp; Executive Dashboards</h3>
-                        <p class="text-gray-600 mb-4">An end-to-end reporting pipeline for a Defence &amp; Government recruitment firm. n8n workflows ingest HubSpot contacts and deals into an ArangoDB reporting warehouse, a read-only FastAPI service exposes 16 metric endpoints over AQL, and two Grafana dashboards are provisioned as code from the repo: an 11-panel operational Master Report for the CEO and a 7-panel revenue Loss Analysis. Supporting Jupyter notebooks cover candidate pipeline growth, supply/demand gap, security clearance profile, loss analysis and the inbound marketing funnel. Runs on Docker Compose and deploys to AWS EC2 behind nginx/TLS, with every write to the production database gated behind explicit confirmation.</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Recruitment BI Platform &mdash; Executive Reporting for a Defence &amp; Government Recruiter</h3>
+                        <p class="text-gray-600 mb-4">The CEO had 42 questions about the business &mdash; how the pipeline looks, which deals are stuck, how clients are being worked, how recruitment and LinkedIn are performing &mdash; and no single place to answer them. I built that place. Every night the platform pulls the firm&rsquo;s data out of HubSpot and LinkedIn into a three-layer warehouse &mdash; raw history, cleaned, report-ready &mdash; and refreshes one executive dashboard, provisioned as code. Because the raw layer is never overwritten, the CEO can look back and see exactly how the numbers stood on any past date. The numbers are checked, not assumed: 276 automated checks test every metric against an independent calculation on every run. Runs on Docker Compose and deploys to AWS EC2 behind nginx/TLS with daily backups, every write to production gated behind explicit confirmation, and no candidate&rsquo;s personal details in any report, log or line of code. <strong>Next:</strong> an AI assistant answering those same questions in plain English, off the same trusted numbers as the dashboard.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">ArangoDB</span>
                             <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">AQL</span>
@@ -400,6 +400,8 @@
                             <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Docker Compose</span>
                             <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">AWS EC2</span>
                             <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Jupyter</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Medallion Architecture</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Automated Testing</span>
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-gray-500 text-sm italic">Private client work &mdash; walkthrough available on request</span>
