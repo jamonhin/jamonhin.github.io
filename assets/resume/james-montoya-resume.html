@@ -295,7 +295,7 @@
                                 <ul>
                                     <li>Built multi-stage AI recruitment pipeline: CV ingestion, structured extraction (skills, security clearances, capability domains), graph-based storage in ArangoDB</li>
                                     <li>Designed multi-agent architecture (Router &rarr; Query Builder &rarr; Response Formatter &rarr; Validator) orchestrated through n8n, surfaced to recruiters as a conversational agent inside Microsoft Teams</li>
-                                    <li>Extended the platform into executive reporting: n8n ingestion of HubSpot contacts and deals into an ArangoDB reporting warehouse, a read-only FastAPI service exposing 16 metric endpoints, and two Grafana dashboards provisioned as code and deployed on AWS EC2</li>
+                                    <li>Extended the platform into executive reporting: nightly n8n ingestion of HubSpot and LinkedIn data into a three-layer Postgres warehouse, a read-only FastAPI service exposing the semantic layer, and an executive Grafana dashboard provisioned as code on AWS EC2, answering the CEO's 42 business questions with 276 automated checks validating every metric against an independent calculation</li>
                                     <li>HubSpot integration processing ~1,759 contacts with AGSVA clearance and skills data; automated resume processing cutting manual data entry by 95%; dual-layer skill extraction preventing domain mismatches with 90%+ accuracy</li>
                                 </ul>
                             </div>
@@ -502,7 +502,7 @@
                         <ul>
                             <li>Designed an auditable document-validation pipeline whose eligibility rules live in versioned decision tables, each citing its source policy &mdash; so every automated outcome can be traced back to the rule that produced it</li>
                             <li>Shipped privacy-by-design AI: local inference, synthetic data in development, and no real applicant information leaving the client environment</li>
-                            <li>Built a reporting warehouse and two provisioned-as-code Grafana dashboards over a HubSpot &rarr; ArangoDB pipeline, deployed on AWS EC2</li>
+                            <li>Built a three-layer Postgres reporting warehouse with a semantic metric layer and a provisioned-as-code Grafana dashboard, validated by 276 automated data-quality checks</li>
                             <li>Reduced manual document lookup time by 80% and manual data entry by 95% through AI-powered automation</li>
                             <li>Achieved 95%+ accuracy in intelligent document processing across 150+ documents</li>
                             <li>Built the Voice of the Customer POC in days &mdash; end-to-end pipeline on real insurance transcripts with a live dashboard</li>

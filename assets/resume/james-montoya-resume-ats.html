@@ -61,7 +61,7 @@ LinkedIn: linkedin.com/in/james-montoya | Portfolio: jamonhin.github.io
 <ul>
 <li>Built a multi-stage AI recruitment pipeline covering CV ingestion, structured extraction of skills, security clearances and capability domains, and graph-based storage in ArangoDB.</li>
 <li>Designed a multi-agent architecture (router, query builder, response formatter, validator) orchestrated through n8n and surfaced to recruiters as a conversational agent inside Microsoft Teams.</li>
-<li>Extended the platform into executive reporting: n8n ingestion of HubSpot contacts and deals into an ArangoDB reporting warehouse, a read-only FastAPI service exposing 16 metric endpoints, and two Grafana dashboards provisioned as code and deployed on AWS EC2.</li>
+<li>Extended the platform into executive reporting: nightly n8n ingestion of HubSpot and LinkedIn data into a three-layer Postgres warehouse, a read-only FastAPI service exposing the semantic layer, and an executive Grafana dashboard provisioned as code on AWS EC2, answering the CEO's 42 business questions with 276 automated checks validating every metric against an independent calculation.</li>
 <li>Delivered HubSpot integration processing approximately 1,759 contacts with AGSVA clearance and skills data.</li>
 <li>Automated resume processing, reducing manual data entry by 95 percent, with dual-layer skill extraction preventing domain mismatches at over 90 percent accuracy.</li>
 </ul>
@@ -136,7 +136,7 @@ LinkedIn: linkedin.com/in/james-montoya | Portfolio: jamonhin.github.io
 <li>Delivered privacy-by-design AI using local inference, with no real applicant information leaving the client environment.</li>
 <li>Reduced manual document lookup time by 80 percent and manual data entry by 95 percent through AI-powered automation.</li>
 <li>Achieved over 95 percent accuracy in intelligent document processing across more than 150 documents.</li>
-<li>Built a reporting warehouse and two provisioned-as-code Grafana dashboards over a HubSpot to ArangoDB pipeline deployed on AWS.</li>
+<li>Built a three-layer Postgres reporting warehouse with a semantic metric layer and a provisioned-as-code Grafana dashboard, validated by 276 automated data-quality checks.</li>
 <li>Benchmarked competing language models on identical production data before committing to one.</li>
 <li>Migrated complex financial database systems at enterprise scale in regulated banking.</li>
 <li>Delivered AI training programmes for not-for-profit organisations.</li>
